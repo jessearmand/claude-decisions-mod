@@ -1,0 +1,23 @@
+{
+    "name": "claude-decisions-mod",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Claude Code mod: deterministic Bash and file guards plus a Jev decision-model risk judge",
+    "type": "module",
+    "packageManager": "bun@1.4.2",
+    "scripts": {
+        "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
+        "lint": "biome check .",
+        "format": "biome format --write .",
+        "test": "vitest run",
+        "test:mod": "claude plugin test .",
+        "validate": "claude plugin validate .",
+        "check": "bun run typecheck && bun run lint && bun run test"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.5.15",
+        "@types/node": "^22.0.0",
+        "typescript": "6.0.2",
+        "vitest": "^5.0.5"
+    }
+}

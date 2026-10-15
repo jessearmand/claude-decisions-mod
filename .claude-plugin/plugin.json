@@ -1,0 +1,73 @@
+{
+    "name": "decisions-guard",
+    "version": "0.1.0",
+    "description": "Deterministic Bash and file guards (rm -rf, dangerous commands, secrets, agent config, generated files) plus a Jev decision-model risk judge on Vercel AI Gateway",
+    "author": { "name": "Jesse Armand" },
+    "repository": "https://github.com/jessearmand/claude-decisions-mod",
+    "license": "Apache-2.0",
+    "keywords": ["security", "hooks", "bash", "guard", "jev", "decision-model"],
+    "userConfig": {
+        "jevEnable": {
+            "type": "boolean",
+            "title": "Enable the Jev risk judge",
+            "description": "Ask a decision model on Vercel AI Gateway about risky Bash commands the deterministic guards do not decide. Off by default; HOOK_JEV_ENABLE=1 in the environment also turns it on.",
+            "default": false
+        },
+        "jevModel": {
+            "type": "string",
+            "title": "Decision model",
+            "description": "Gateway decision model id, e.g. typesafe-ai/jev or openai/gpt-6-luna-decisions (HOOK_JEV_MODEL overrides).",
+            "default": "typesafe-ai/jev"
+        },
+        "jevApiKey": {
+            "type": "string",
+            "title": "AI Gateway API key",
+            "description": "Bearer credential for https://ai-gateway.vercel.sh. Leave empty to use AI_GATEWAY_API_KEY or VERCEL_OIDC_TOKEN from the environment, or fnox (HOOK_JEV_FNOX_CONFIG).",
+            "sensitive": true
+        },
+        "jevTimeoutSeconds": {
+            "type": "number",
+            "title": "Judge timeout (seconds)",
+            "description": "The whole decision call must finish inside this; otherwise the judge defers (HOOK_JEV_TIMEOUT overrides).",
+            "default": 5
+        },
+        "askThreshold": {
+            "type": "number",
+            "title": "Ask threshold",
+            "description": "Probability of a concern at or above which the judge asks the user (BASH_RISK_JUDGE_ASK_THRESHOLD overrides).",
+            "default": 0.7
+        },
+        "secretsLevel": {
+            "type": "string",
+            "title": "Secrets guard level",
+            "description": "critical: SSH keys, cloud credentials, .env; high: + secrets files, env dumps, exfiltration; strict: + database configs and anything that might hold a secret.",
+            "options": ["critical", "high", "strict"],
+            "default": "high"
+        },
+        "dangerousLevel": {
+            "type": "string",
+            "title": "Dangerous commands level",
+            "description": "Which tiers of the dangerous-commands rules apply.",
+            "options": ["critical", "high", "strict"],
+            "default": "high"
+        },
+        "askInsteadOfDeny": {
+            "type": "boolean",
+            "title": "Ask instead of deny",
+            "description": "Prompt the user for every deterministic denial instead of refusing outright (the per-guard *_ASK environment variables still apply).",
+            "default": false
+        },
+        "unattendedKeepAsk": {
+            "type": "boolean",
+            "title": "Keep asks under bypassPermissions/dontAsk",
+            "description": "By default a deterministic ask becomes a deny when the permission mode means nobody can answer (HOOK_UNATTENDED_KEEP_ASK=1 is the same).",
+            "default": false
+        },
+        "logDir": {
+            "type": "string",
+            "title": "Audit log directory",
+            "description": "Where decisions are appended as JSONL, one file per day. Empty means ~/.claude/hooks-logs (HOOKS_LOG_DIR overrides).",
+            "default": ""
+        }
+    }
+}
