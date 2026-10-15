@@ -1,0 +1,9284 @@
+[
+    {
+        "value": "rm",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": ":1",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "rm",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": "#r",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rm",
+        "operator": "#",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "#?",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rm",
+        "operator": "%?",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "rm",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "cm"
+    },
+    {
+        "value": "rm",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "cm"
+    },
+    {
+        "value": "rm",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "rc"
+    },
+    {
+        "value": "rm",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rm",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rm",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xm"
+    },
+    {
+        "value": "rm",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xrm"
+    },
+    {
+        "value": "rm",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "rmx"
+    },
+    {
+        "value": "rm",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^",
+        "extglob": false,
+        "result": "Rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^^",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": ",",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": ",,",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^r",
+        "extglob": false,
+        "result": "Rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": ",R",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Rm"
+    },
+    {
+        "value": "rm",
+        "operator": "@E",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'rm'"
+    },
+    {
+        "value": "rm",
+        "operator": "@U",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Rm"
+    },
+    {
+        "value": "rm",
+        "operator": "@L",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "rm",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "x"
+    },
+    {
+        "value": "rm",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "rm"
+    },
+    {
+        "value": "rm",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "rm",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "x"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":1",
+        "extglob": false,
+        "result": "mdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "di"
+    },
+    {
+        "value": "rmdir",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "md"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "rmdi"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "di"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rmdir",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rmdir",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rmdir",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "m"
+    },
+    {
+        "value": "rmdir",
+        "operator": "#r",
+        "extglob": false,
+        "result": "mdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rmdir",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rmdir",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rmdir",
+        "operator": "#",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "#?",
+        "extglob": false,
+        "result": "mdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%?",
+        "extglob": false,
+        "result": "rmdi"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "cmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "cmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xrmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "rmdirx"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^",
+        "extglob": false,
+        "result": "Rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^^",
+        "extglob": false,
+        "result": "RMDIR"
+    },
+    {
+        "value": "rmdir",
+        "operator": ",",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": ",,",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^r",
+        "extglob": false,
+        "result": "Rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "RMdiR"
+    },
+    {
+        "value": "rmdir",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": ",R",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "RMDIR"
+    },
+    {
+        "value": "rmdir",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "RMDIR"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@E",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'rmdir'"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@U",
+        "extglob": false,
+        "result": "RMDIR"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@L",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "rmdir",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "xdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "rmdir"
+    },
+    {
+        "value": "rmdir",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "RMdiR"
+    },
+    {
+        "value": "rmdir",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "xdir"
+    },
+    {
+        "value": "RM",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ":1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "RM",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "RM",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "RM",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "R"
+    },
+    {
+        "value": "RM",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "RM",
+        "operator": "#r",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "RM",
+        "operator": "#",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "#?",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "RM",
+        "operator": "%?",
+        "extglob": false,
+        "result": "R"
+    },
+    {
+        "value": "RM",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "RM",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "RM",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xM"
+    },
+    {
+        "value": "RM",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xRM"
+    },
+    {
+        "value": "RM",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "RMx"
+    },
+    {
+        "value": "RM",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "^",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "^^",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ",",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "RM",
+        "operator": ",,",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "RM",
+        "operator": "^r",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "Rm"
+    },
+    {
+        "value": "RM",
+        "operator": ",R",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "RM",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "RM",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "^*",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "@E",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'RM'"
+    },
+    {
+        "value": "RM",
+        "operator": "@U",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "@u",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "@L",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "RM",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "RM",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "RM",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "/h"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":1",
+        "extglob": false,
+        "result": "home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "k"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "ba"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "ho"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "/home/user/.claude/x.ba"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "ome/user/.claude/x.ba"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": "/user/.cl"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "aude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":10",
+        "extglob": false,
+        "result": "/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "h"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#r",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "/home/user/.claude/x"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "/home/user/"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "/home/user/.claude/x"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#?",
+        "extglob": false,
+        "result": "home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%?",
+        "extglob": false,
+        "result": "/home/user/.claude/x.ba"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "/home/usec/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "/home/user/.clbude/x.bbk"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "/home/user/.clude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "/home/user/.clude/x.bk"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "/home/user/.claude/&.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "/home/user/.claude/&.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "/home/user/.claude/&.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "/home/user/.claude/[x].bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xhome/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "x/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bakx"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "/home/user/.clx"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "/home/user/xclaude/xxbak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "/home/user/._laude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "/home/user/._l_ude/x.__k"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^^",
+        "extglob": false,
+        "result": "/HOME/USER/.CLAUDE/X.BAK"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ",",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ",,",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^r",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "/hoMe/useR/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ",R",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "/HOME/USER/.CLAUDE/X.BAK"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "/HOME/USER/.CLAUDE/X.BAK"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^*",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@E",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'/home/user/.claude/x.bak'"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@U",
+        "extglob": false,
+        "result": "/HOME/USER/.CLAUDE/X.BAK"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@u",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@L",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "/home/user/.clxude/x.bxk"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "/home/user/.clxude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "/home/user/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "/hoMe/useR/.claude/x.bak"
+    },
+    {
+        "value": "/home/user/.claude/x.bak",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "/hoxe/user/.claude/x.bak"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "a."
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":1",
+        "extglob": false,
+        "result": ".b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "b."
+    },
+    {
+        "value": "a.b.c",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": ".b"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "a.b."
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "b."
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "."
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#r",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "a"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "a.b"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#?",
+        "extglob": false,
+        "result": ".b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%?",
+        "extglob": false,
+        "result": "a.b."
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "b.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/a/",
+        "extglob": false,
+        "result": ".b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//a/",
+        "extglob": false,
+        "result": ".b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "x.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xa.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "a.b.cx"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "axbxc"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "_._._"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^",
+        "extglob": false,
+        "result": "A.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^^",
+        "extglob": false,
+        "result": "A.B.C"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ",",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ",,",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^r",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ",R",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "A.B.C"
+    },
+    {
+        "value": "a.b.c",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "A.B.C"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^*",
+        "extglob": false,
+        "result": "A.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@E",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'a.b.c'"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@U",
+        "extglob": false,
+        "result": "A.B.C"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@u",
+        "extglob": false,
+        "result": "A.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@L",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "a.b.c",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "x.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "x.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": ".b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "a.b."
+    },
+    {
+        "value": "a.b.c",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "a.b.c"
+    },
+    {
+        "value": "a.b.c",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "a.b.c"
+    },
+    {
+        "value": "hello world",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "he"
+    },
+    {
+        "value": "hello world",
+        "operator": ":1",
+        "extglob": false,
+        "result": "ello world"
+    },
+    {
+        "value": "hello world",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "d"
+    },
+    {
+        "value": "hello world",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "rl"
+    },
+    {
+        "value": "hello world",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "el"
+    },
+    {
+        "value": "hello world",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "hello worl"
+    },
+    {
+        "value": "hello world",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "llo worl"
+    },
+    {
+        "value": "hello world",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "hello world",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "ello world"
+    },
+    {
+        "value": "hello world",
+        "operator": ":10",
+        "extglob": false,
+        "result": "d"
+    },
+    {
+        "value": "hello world",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "hello world",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "e"
+    },
+    {
+        "value": "hello world",
+        "operator": "#r",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "hello world",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "hello world",
+        "operator": "#",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "#?",
+        "extglob": false,
+        "result": "ello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%?",
+        "extglob": false,
+        "result": "hello worl"
+    },
+    {
+        "value": "hello world",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "hello wocld"
+    },
+    {
+        "value": "hello world",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "hello world",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "hello world",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xhello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "hello worldx"
+    },
+    {
+        "value": "hello world",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^",
+        "extglob": false,
+        "result": "Hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^^",
+        "extglob": false,
+        "result": "HELLO WORLD"
+    },
+    {
+        "value": "hello world",
+        "operator": ",",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": ",,",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^r",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "hello woRld"
+    },
+    {
+        "value": "hello world",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": ",R",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "HELLO WORLD"
+    },
+    {
+        "value": "hello world",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "HELLO WORLD"
+    },
+    {
+        "value": "hello world",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "@E",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'hello world'"
+    },
+    {
+        "value": "hello world",
+        "operator": "@U",
+        "extglob": false,
+        "result": "HELLO WORLD"
+    },
+    {
+        "value": "hello world",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "@L",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "hello world",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "hello world",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "hello woRld"
+    },
+    {
+        "value": "hello world",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "hello world"
+    },
+    {
+        "value": "",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#r",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "##*/",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#*/",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%.*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#dir",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%dir",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#?",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%?",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/a/",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//a/",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//./x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^^",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ",",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ",,",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^r",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ",,M",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ",R",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^^?",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "@E",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "''"
+    },
+    {
+        "value": "",
+        "operator": "@U",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "@u",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "@L",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "aX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":1",
+        "extglob": false,
+        "result": "XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "c"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "bX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "Xb"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "aXbX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "bX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "X"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#r",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#?",
+        "extglob": false,
+        "result": "XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%?",
+        "extglob": false,
+        "result": "aXbX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "bXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "a-bXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "a-b-c"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xaXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "aXbXcx"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "_X_X_"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^",
+        "extglob": false,
+        "result": "AXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^^",
+        "extglob": false,
+        "result": "AXBXC"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ",",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ",,",
+        "extglob": false,
+        "result": "axbxc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^r",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ",R",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "AXBXC"
+    },
+    {
+        "value": "aXbXc",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "axbxc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "AXBXC"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^*",
+        "extglob": false,
+        "result": "AXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@E",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'aXbXc'"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@U",
+        "extglob": false,
+        "result": "AXBXC"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@u",
+        "extglob": false,
+        "result": "AXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@L",
+        "extglob": false,
+        "result": "axbxc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "aXbXc",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "xXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "xXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "XbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "aXbX"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "aXbXc"
+    },
+    {
+        "value": "aXbXc",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "aXbXc"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "ab"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":1",
+        "extglob": false,
+        "result": "b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "b*"
+    },
+    {
+        "value": "ab*c",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "b*"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "ab*"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "*"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "ab*c",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "ab*c",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "ab*c",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "b"
+    },
+    {
+        "value": "ab*c",
+        "operator": "#r",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "ab*c",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "ab*c",
+        "operator": "#",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "#?",
+        "extglob": false,
+        "result": "b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%?",
+        "extglob": false,
+        "result": "ab*"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "bb*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xb*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "ab*cx"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "__*_"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^",
+        "extglob": false,
+        "result": "Ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^^",
+        "extglob": false,
+        "result": "AB*C"
+    },
+    {
+        "value": "ab*c",
+        "operator": ",",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ",,",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^r",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": ",R",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "AB*C"
+    },
+    {
+        "value": "ab*c",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "AB*C"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@E",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'ab*c'"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@U",
+        "extglob": false,
+        "result": "AB*C"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@L",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "ab*c",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "xb*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "xb*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "b*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "ab*"
+    },
+    {
+        "value": "ab*c",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "ab*c"
+    },
+    {
+        "value": "ab*c",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "ab*c"
+    },
+    {
+        "value": "rM",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": ":1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "rM",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": "#r",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "rM",
+        "operator": "#",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "#?",
+        "extglob": false,
+        "result": "M"
+    },
+    {
+        "value": "rM",
+        "operator": "%?",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "rM",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "cM"
+    },
+    {
+        "value": "rM",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "cM"
+    },
+    {
+        "value": "rM",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rM",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "rM",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xM"
+    },
+    {
+        "value": "rM",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xrM"
+    },
+    {
+        "value": "rM",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "rMx"
+    },
+    {
+        "value": "rM",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "^",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "^^",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": ",",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": ",,",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rM",
+        "operator": "^r",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rM",
+        "operator": ",R",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rM",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "^*",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "@E",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'rM'"
+    },
+    {
+        "value": "rM",
+        "operator": "@U",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "@u",
+        "extglob": false,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "@L",
+        "extglob": false,
+        "result": "rm"
+    },
+    {
+        "value": "rM",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "rM",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "rM",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "RM"
+    },
+    {
+        "value": "rM",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "rM"
+    },
+    {
+        "value": "x'y",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "x'"
+    },
+    {
+        "value": "x'y",
+        "operator": ":1",
+        "extglob": false,
+        "result": "'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "y"
+    },
+    {
+        "value": "x'y",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "x'"
+    },
+    {
+        "value": "x'y",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "x'"
+    },
+    {
+        "value": "x'y",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "'"
+    },
+    {
+        "value": "x'y",
+        "operator": "#r",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "x'y",
+        "operator": "#",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "#?",
+        "extglob": false,
+        "result": "'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%?",
+        "extglob": false,
+        "result": "x'"
+    },
+    {
+        "value": "x'y",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "&'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "&'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "&'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "[x]'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "x'y",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "x'y",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xx'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "x'yx"
+    },
+    {
+        "value": "x'y",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^",
+        "extglob": false,
+        "result": "X'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^^",
+        "extglob": false,
+        "result": "X'Y"
+    },
+    {
+        "value": "x'y",
+        "operator": ",",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ",,",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^r",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": ",R",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "X'Y"
+    },
+    {
+        "value": "x'y",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "X'Y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^*",
+        "extglob": false,
+        "result": "X'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "@E",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'x'\\''y'"
+    },
+    {
+        "value": "x'y",
+        "operator": "@U",
+        "extglob": false,
+        "result": "X'Y"
+    },
+    {
+        "value": "x'y",
+        "operator": "@u",
+        "extglob": false,
+        "result": "X'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "@L",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "x'y",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "x'y",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "x'y"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "a\\"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":1",
+        "extglob": false,
+        "result": "\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "c"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "\\t"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "\\n"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "a\\nb\\t"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "nb\\t"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "\\"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#r",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#?",
+        "extglob": false,
+        "result": "\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%?",
+        "extglob": false,
+        "result": "a\\nb\\t"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "b\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "x\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xa\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "a\\nb\\tcx"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "_\\n_\\t_"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^",
+        "extglob": false,
+        "result": "A\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^^",
+        "extglob": false,
+        "result": "A\\NB\\TC"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ",",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ",,",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^r",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ",R",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "A\\NB\\TC"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "A\\NB\\TC"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^*",
+        "extglob": false,
+        "result": "A\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@E",
+        "extglob": false,
+        "result": "a\nb\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'a\\nb\\tc'"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@U",
+        "extglob": false,
+        "result": "A\\NB\\TC"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@u",
+        "extglob": false,
+        "result": "A\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@L",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "x\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "x\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "a\\nb\\t"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "a\\nb\\tc",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "a\\nb\\tc"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "~/"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":1",
+        "extglob": false,
+        "result": "/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "n"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "so"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "/."
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "~/.claude/settings.jso"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ".claude/settings.jso"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": "aude/set"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "tings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":10",
+        "extglob": false,
+        "result": "settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "/"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#r",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#*/",
+        "extglob": false,
+        "result": ".claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "~/"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "~/.claude/settings"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#?",
+        "extglob": false,
+        "result": "/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%?",
+        "extglob": false,
+        "result": "~/.claude/settings.jso"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "~/.clbude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "~/.clude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "~/.clude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "x/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "x~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "~/.claude/settings.jsonx"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "~/.clx"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "~/xclaude/settingsxjson"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "~/._laude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "~/._l_ude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^^",
+        "extglob": false,
+        "result": "~/.CLAUDE/SETTINGS.JSON"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ",",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ",,",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^r",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ",R",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "~/.CLAUDE/SETTINGS.JSON"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "~/.CLAUDE/SETTINGS.JSON"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^*",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@E",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'~/.claude/settings.json'"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@U",
+        "extglob": false,
+        "result": "~/.CLAUDE/SETTINGS.JSON"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@u",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@L",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "~/.clxude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "~/.clxude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "~/.claude/settings.json",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "~/.claude/settings.json"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "Ün"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":1",
+        "extglob": false,
+        "result": "nïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "e"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "od"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "nï"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "Ünïcod"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "ïcod"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "n"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#r",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#?",
+        "extglob": false,
+        "result": "nïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%?",
+        "extglob": false,
+        "result": "Ünïcod"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xnïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xÜnïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "Ünïcodex"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "Ünï_ode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "Ünï_ode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^^",
+        "extglob": false,
+        "result": "ÜNÏCODE"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ",",
+        "extglob": false,
+        "result": "ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ",,",
+        "extglob": false,
+        "result": "ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^r",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ",R",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "ÜNïCODE"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "ÜNÏCODE"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@E",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'Ünïcode'"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@U",
+        "extglob": false,
+        "result": "ÜNÏCODE"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@L",
+        "extglob": false,
+        "result": "ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "Ünïcode",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "Ünïcode"
+    },
+    {
+        "value": "a&b",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "a&"
+    },
+    {
+        "value": "a&b",
+        "operator": ":1",
+        "extglob": false,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "b"
+    },
+    {
+        "value": "a&b",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "a&"
+    },
+    {
+        "value": "a&b",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "a&"
+    },
+    {
+        "value": "a&b",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "&"
+    },
+    {
+        "value": "a&b",
+        "operator": "#r",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "a&b",
+        "operator": "#",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "#?",
+        "extglob": false,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%?",
+        "extglob": false,
+        "result": "a&"
+    },
+    {
+        "value": "a&b",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "b&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a&b",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a&b",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "x&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xa&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "a&bx"
+    },
+    {
+        "value": "a&b",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "a&b",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "axb"
+    },
+    {
+        "value": "a&b",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "_&_"
+    },
+    {
+        "value": "a&b",
+        "operator": "^",
+        "extglob": false,
+        "result": "A&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^^",
+        "extglob": false,
+        "result": "A&B"
+    },
+    {
+        "value": "a&b",
+        "operator": ",",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ",,",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^r",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": ",R",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "A&B"
+    },
+    {
+        "value": "a&b",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "A&B"
+    },
+    {
+        "value": "a&b",
+        "operator": "^*",
+        "extglob": false,
+        "result": "A&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "@E",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'a&b'"
+    },
+    {
+        "value": "a&b",
+        "operator": "@U",
+        "extglob": false,
+        "result": "A&B"
+    },
+    {
+        "value": "a&b",
+        "operator": "@u",
+        "extglob": false,
+        "result": "A&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "@L",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "a&b",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "x&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "x&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "a&b"
+    },
+    {
+        "value": "a&b",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "a&b"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "ab"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":1",
+        "extglob": false,
+        "result": "bcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "c"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "ab"
+    },
+    {
+        "value": "abcabc",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "bc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "abcab"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": "cab"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "abcabc",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "abcabc",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "abcabc",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "b"
+    },
+    {
+        "value": "abcabc",
+        "operator": "#r",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "abcabc",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "abcabc",
+        "operator": "#",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "#?",
+        "extglob": false,
+        "result": "bcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%?",
+        "extglob": false,
+        "result": "abcab"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "bbcbbc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "bcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "bcbc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xbcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "xabcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "abcabcx"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "_bcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "______"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^",
+        "extglob": false,
+        "result": "Abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^^",
+        "extglob": false,
+        "result": "ABCABC"
+    },
+    {
+        "value": "abcabc",
+        "operator": ",",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ",,",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^r",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": ",R",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "ABCABC"
+    },
+    {
+        "value": "abcabc",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "ABCABC"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^*",
+        "extglob": false,
+        "result": "Abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@E",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'abcabc'"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@U",
+        "extglob": false,
+        "result": "ABCABC"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@u",
+        "extglob": false,
+        "result": "Abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@L",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "abcabc",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "xbcxbc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "xbcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "bcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "abcab"
+    },
+    {
+        "value": "abcabc",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "abcabc"
+    },
+    {
+        "value": "abcabc",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "abcabc"
+    },
+    {
+        "value": "-rf",
+        "operator": ":0:2",
+        "extglob": false,
+        "result": "-r"
+    },
+    {
+        "value": "-rf",
+        "operator": ":1",
+        "extglob": false,
+        "result": "rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ":-1",
+        "extglob": false,
+        "result": "f"
+    },
+    {
+        "value": "-rf",
+        "operator": ":-3:2",
+        "extglob": false,
+        "result": "-r"
+    },
+    {
+        "value": "-rf",
+        "operator": ": 1 : 2 ",
+        "extglob": false,
+        "result": "rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ":0:-1",
+        "extglob": false,
+        "result": "-r"
+    },
+    {
+        "value": "-rf",
+        "operator": ":2:-1",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": ":5:-10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": ":-10",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ":10",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": ":0:0",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": ":1:1",
+        "extglob": false,
+        "result": "r"
+    },
+    {
+        "value": "-rf",
+        "operator": "#r",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "##*/",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "#*/",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%.bak",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%%.*",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%.*",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "#dir",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%dir",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "##*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": "%%*",
+        "extglob": false,
+        "result": ""
+    },
+    {
+        "value": "-rf",
+        "operator": "#",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "#?",
+        "extglob": false,
+        "result": "rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%?",
+        "extglob": false,
+        "result": "-r"
+    },
+    {
+        "value": "-rf",
+        "operator": "/r/c",
+        "extglob": false,
+        "result": "-cf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//a/b",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/a/",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//a/",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/#r/c",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/%m/c",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/x/&",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/x/\\&",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/x/'&'",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/x/\"&\"",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/x/[&]",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/X/-",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//X/-",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "-rf",
+        "operator": "//*/x",
+        "extglob": false,
+        "result": "x"
+    },
+    {
+        "value": "-rf",
+        "operator": "/?/x",
+        "extglob": false,
+        "result": "xrf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/#/x",
+        "extglob": false,
+        "result": "x-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/%/x",
+        "extglob": false,
+        "result": "-rfx"
+    },
+    {
+        "value": "-rf",
+        "operator": "/a*/x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//./x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/&/x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/[a-c]/_",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//[a-c]/_",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^^",
+        "extglob": false,
+        "result": "-RF"
+    },
+    {
+        "value": "-rf",
+        "operator": ",",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ",,",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^r",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^^[rm]",
+        "extglob": false,
+        "result": "-Rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ",,M",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": ",R",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^^[[:lower:]]",
+        "extglob": false,
+        "result": "-RF"
+    },
+    {
+        "value": "-rf",
+        "operator": ",,[[:upper:]]",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^^?",
+        "extglob": false,
+        "result": "-RF"
+    },
+    {
+        "value": "-rf",
+        "operator": "^*",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "@E",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "@Q",
+        "extglob": false,
+        "result": "'-rf'"
+    },
+    {
+        "value": "-rf",
+        "operator": "@U",
+        "extglob": false,
+        "result": "-RF"
+    },
+    {
+        "value": "-rf",
+        "operator": "@u",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "@L",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "@P",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "@A",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "@K",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "@a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "@",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "@x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "!bogus",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "x",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": ":",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": ":a",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "::",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": ":1:2:3",
+        "extglob": false,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "/!(r)/m",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "//+(a)/x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/@(r|c)m/x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/*(a)/x",
+        "extglob": false,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/!(r)/m",
+        "extglob": true,
+        "result": null
+    },
+    {
+        "value": "-rf",
+        "operator": "//+(a)/x",
+        "extglob": true,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/@(r|c)m/x",
+        "extglob": true,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/*(a)/x",
+        "extglob": true,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "#+(a)",
+        "extglob": true,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "%%+(c)",
+        "extglob": true,
+        "result": "-rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "^^@(r|m)",
+        "extglob": true,
+        "result": "-Rf"
+    },
+    {
+        "value": "-rf",
+        "operator": "/?(r)m/x",
+        "extglob": true,
+        "result": "-rf"
+    }
+]

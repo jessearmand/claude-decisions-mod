@@ -81,9 +81,9 @@ Consequences of the Python code touching the disk synchronously:
 - `os.path.expanduser(p)` is `expanduser(p, host.home)`; `os.getcwd()` is
   never called (the cwd is always a parameter); `os.environ.get(x)` is
   `host.env(x)` and `x` is added to `KNOWN_ENV_NAMES` in `host.ts`.
-- `glob.glob(pattern)` is `globPaths(pattern, cwd, host)` from
-  `src/shell/glob.ts` (list directories with `host.list`, match with the
-  module's own matcher).
+- `glob.glob(pattern, root_dir=cwd)` is `globPaths(pattern, host, { rootDir: cwd, limit })`
+  from `src/shell/glob.ts` (it lists directories with `host.list` and matches
+  with the module's own matcher).
 - `tarfile`/`zipfile` listings run `tar -tvf` / `unzip -Z1` through `host.run`.
 - Every host method answers `undefined` on failure; never `try/catch` around
   them for ordinary misses, decide conservatively instead.

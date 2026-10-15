@@ -1,0 +1,6531 @@
+{
+    "invocations": [
+        {
+            "name": "bash",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": "rc"
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": "rc"
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": "rc"
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": "rc"
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": ""
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": "r"
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "bash",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "sh",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "zsh",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "dash",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["--"],
+                "commandArgs": ["x"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a", "b"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-C", "init", "-c", "main"],
+            "result": {
+                "commands": ["init", "main"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--init-command=init", "s.fish"],
+            "result": {
+                "commands": ["init"],
+                "commandArgs": [],
+                "script": "s.fish",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "a", "b", "c"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["b", "c"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-d", "3", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--debug=3", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-p", "prof", "s.fish"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.fish",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-C", "init"],
+            "result": {
+                "commands": ["init"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-C"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--command"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "fish",
+            "args": ["--features", "f", "--", "s.fish", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.fish",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "ksh",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": [],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "rm -rf x"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "rm -rf x", "sh", "a", "b"],
+            "result": {
+                "commands": ["rm -rf x"],
+                "commandArgs": ["sh", "a", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-lc", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-xc", "ls", "arg0"],
+            "result": {
+                "commands": ["ls"],
+                "commandArgs": ["arg0"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-n", "-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-s", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-s"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["/dev/stdin", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["/dev/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["/proc/self/fd/0"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["script.sh", "a", "b"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a", "b"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--", "script.sh", "a"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": ["a"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--", "-c", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "-c",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "--", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["+o", "posix", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-o", "pipefail", "script.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "script.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-O", "extglob", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--rcfile", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--rcfile=rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--init-file", "rc", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile", "rc", "--norc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile", "rc", "--login"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-il", "--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile", "rc", "--posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile", "rc", "-o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile", "rc", "+o", "posix"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--rcfile", "rc"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-i", "--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--rcfile"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-o"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--norc", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--posix", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--login", "-c", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--verbose", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["+x", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["+", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "+",
+                "scriptArgs": ["s.sh"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--", "-"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "x", "--", "y"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": ["--", "y"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-ic", "x"],
+            "result": {
+                "commands": ["x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-si", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-is"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-nx", "s.sh"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": true,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-abc", "s.sh"],
+            "result": {
+                "commands": ["s.sh"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-e", "s.sh", "-c", "y"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "s.sh",
+                "scriptArgs": ["-c", "y"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "a", "-c", "b"],
+            "result": {
+                "commands": ["a"],
+                "commandArgs": ["-c", "b"],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--", "--", "x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "--",
+                "scriptArgs": ["x"],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--rcfile=", "-i"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-o", "posix", "+o", "posix", "-i", "--rcfile", "r"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": true,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["-c", "rm x"],
+            "result": {
+                "commands": ["rm x"],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--command", "rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": "rm x",
+                "scriptArgs": [],
+                "readsStdin": false,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        },
+        {
+            "name": "yash",
+            "args": ["--command=rm x"],
+            "result": {
+                "commands": [],
+                "commandArgs": [],
+                "script": null,
+                "scriptArgs": [],
+                "readsStdin": true,
+                "syntaxOnly": false,
+                "interactive": false,
+                "startupFile": null
+            }
+        }
+    ],
+    "tables": {
+        "PREFIX_WRAPPERS": {
+            "sudo": {
+                "withArg": [
+                    "--chdir",
+                    "--close-from",
+                    "--command-timeout",
+                    "--group",
+                    "--host",
+                    "--other-user",
+                    "--prompt",
+                    "--role",
+                    "--type",
+                    "--user",
+                    "-C",
+                    "-D",
+                    "-T",
+                    "-U",
+                    "-g",
+                    "-h",
+                    "-p",
+                    "-r",
+                    "-t",
+                    "-u"
+                ],
+                "positionals": 0,
+                "noExec": [
+                    "--edit",
+                    "--list",
+                    "--remove-timestamp",
+                    "--reset-timestamp",
+                    "--validate",
+                    "--version",
+                    "-K",
+                    "-V",
+                    "-e",
+                    "-k",
+                    "-l",
+                    "-v"
+                ],
+                "commandOptions": [],
+                "chdirOptions": ["--chdir", "-D"]
+            },
+            "doas": {
+                "withArg": ["-C", "-u"],
+                "positionals": 0,
+                "noExec": ["-C"],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "pkexec": {
+                "withArg": ["--user"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "run0": {
+                "withArg": [
+                    "--chdir",
+                    "--description",
+                    "--group",
+                    "--property",
+                    "--setenv",
+                    "--slice",
+                    "--unit",
+                    "--user",
+                    "-D",
+                    "-g",
+                    "-u"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": ["--chdir", "-D"]
+            },
+            "env": {
+                "withArg": [
+                    "--argv0",
+                    "--block-signal",
+                    "--chdir",
+                    "--default-signal",
+                    "--ignore-signal",
+                    "--unset",
+                    "-C",
+                    "-P",
+                    "-a",
+                    "-u"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": ["--chdir", "-C"]
+            },
+            "nice": {
+                "withArg": ["--adjustment", "-n"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "ionice": {
+                "withArg": [
+                    "--class",
+                    "--classdata",
+                    "--pgid",
+                    "--pid",
+                    "--uid",
+                    "-P",
+                    "-c",
+                    "-n",
+                    "-p",
+                    "-u"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "timeout": {
+                "withArg": ["--kill-after", "--signal", "-k", "-s"],
+                "positionals": 1,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "gtimeout": {
+                "withArg": ["--kill-after", "--signal", "-k", "-s"],
+                "positionals": 1,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "nohup": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "setsid": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "stdbuf": {
+                "withArg": ["--error", "--input", "--output", "-e", "-i", "-o"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "time": {
+                "withArg": ["--format", "--output", "-f", "-o"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "strace": {
+                "withArg": [
+                    "--abbrev",
+                    "--argv0",
+                    "--attach",
+                    "--color",
+                    "--columns",
+                    "--const-print-style",
+                    "--decode-pids",
+                    "--detach-on",
+                    "--env",
+                    "--fault",
+                    "--inject",
+                    "--interruptible",
+                    "--kvm",
+                    "--output",
+                    "--raw",
+                    "--read",
+                    "--signal",
+                    "--signals",
+                    "--stack-trace-frame-limit",
+                    "--status",
+                    "--string-limit",
+                    "--summary-columns",
+                    "--summary-sort-by",
+                    "--summary-syscall-overhead",
+                    "--syscall-limit",
+                    "--trace",
+                    "--trace-fds",
+                    "--trace-path",
+                    "--user",
+                    "--verbose",
+                    "--write",
+                    "-E",
+                    "-I",
+                    "-O",
+                    "-P",
+                    "-S",
+                    "-U",
+                    "-X",
+                    "-a",
+                    "-b",
+                    "-e",
+                    "-o",
+                    "-p",
+                    "-s",
+                    "-u"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "command": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": ["-V", "-v"],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "builtin": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "exec": {
+                "withArg": ["-a"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "caffeinate": {
+                "withArg": ["-t", "-w"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "chronic": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "unbuffer": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "fakeroot": {
+                "withArg": ["--faked", "--lib", "-i", "-l", "-s"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "proxychains": {
+                "withArg": ["-f"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "proxychains4": {
+                "withArg": ["-f"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "torsocks": {
+                "withArg": ["-P", "-a", "-p", "-u"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "busybox": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "toybox": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "xargs": {
+                "withArg": [
+                    "--arg-file",
+                    "--delimiter",
+                    "--eof",
+                    "--max-args",
+                    "--max-chars",
+                    "--max-lines",
+                    "--max-procs",
+                    "--process-slot-var",
+                    "--replace",
+                    "-E",
+                    "-I",
+                    "-L",
+                    "-P",
+                    "-a",
+                    "-d",
+                    "-e",
+                    "-n",
+                    "-s"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "flock": {
+                "withArg": ["--conflict-exit-code", "--timeout", "-E", "-w"],
+                "positionals": 1,
+                "noExec": [],
+                "commandOptions": ["--command", "-c"],
+                "chdirOptions": []
+            },
+            "chroot": {
+                "withArg": ["--groups", "--userspec"],
+                "positionals": 1,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            },
+            "unshare": {
+                "withArg": ["--mount-proc", "--root", "--setgid", "--setuid", "--wd", "-G", "-R", "-S", "-w"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": ["--wd", "-w"]
+            },
+            "nsenter": {
+                "withArg": [
+                    "--root",
+                    "--setgid",
+                    "--setuid",
+                    "--target",
+                    "--wd",
+                    "-G",
+                    "-R",
+                    "-S",
+                    "-t",
+                    "-w"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": ["--wd", "-w"]
+            },
+            "dbus-launch": {
+                "withArg": [],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            }
+        },
+        "STRING_RUNNERS": {
+            "su": {
+                "withArg": [
+                    "--group",
+                    "--shell",
+                    "--supp-group",
+                    "--whitelist-environment",
+                    "-G",
+                    "-g",
+                    "-s",
+                    "-w"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": ["--command", "-c"],
+                "chdirOptions": []
+            },
+            "runuser": {
+                "withArg": ["--group", "--shell", "--supp-group", "--user", "-G", "-g", "-s", "-u", "-w"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": ["--command", "-c"],
+                "chdirOptions": []
+            },
+            "script": {
+                "withArg": [
+                    "--echo",
+                    "--log-in",
+                    "--log-io",
+                    "--log-out",
+                    "--log-timing",
+                    "--logging-format",
+                    "--output-limit",
+                    "-B",
+                    "-E",
+                    "-I",
+                    "-O",
+                    "-T",
+                    "-m",
+                    "-o"
+                ],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": ["--command", "-c"],
+                "chdirOptions": []
+            },
+            "watch": {
+                "withArg": ["--chgexit", "--differences", "--equexit", "--interval", "-d", "-n", "-q"],
+                "positionals": 0,
+                "noExec": [],
+                "commandOptions": [],
+                "chdirOptions": []
+            }
+        },
+        "SUBCOMMAND_RUNNERS": {
+            "mise": {
+                "subcommands": ["exec", "x"],
+                "withArg": ["--cd", "--command", "--env", "--jobs", "-C", "-E", "-c", "-j"],
+                "positionals": 0,
+                "chdirOptions": ["--cd", "-C"],
+                "commandOptions": ["--command", "-c"]
+            },
+            "npm": {
+                "subcommands": ["exec", "x"],
+                "withArg": ["--call", "--package", "--prefix", "--workspace", "-c", "-p", "-w"],
+                "positionals": 0,
+                "chdirOptions": ["--prefix"],
+                "commandOptions": ["--call", "-c"]
+            },
+            "fnox": {
+                "subcommands": ["exec"],
+                "withArg": ["--config", "--if-missing", "--profile", "-c", "-p"],
+                "positionals": 0,
+                "chdirOptions": [],
+                "commandOptions": []
+            },
+            "direnv": {
+                "subcommands": ["exec"],
+                "withArg": [],
+                "positionals": 1,
+                "chdirOptions": [],
+                "commandOptions": []
+            },
+            "uv": {
+                "subcommands": ["run"],
+                "withArg": [
+                    "--cache-dir",
+                    "--config-file",
+                    "--default-index",
+                    "--directory",
+                    "--env-file",
+                    "--extra",
+                    "--extra-index-url",
+                    "--find-links",
+                    "--group",
+                    "--index",
+                    "--index-url",
+                    "--no-group",
+                    "--only-group",
+                    "--package",
+                    "--project",
+                    "--python",
+                    "--with",
+                    "--with-editable",
+                    "--with-requirements",
+                    "-f",
+                    "-p"
+                ],
+                "positionals": 0,
+                "chdirOptions": ["--directory"],
+                "commandOptions": []
+            },
+            "poetry": {
+                "subcommands": ["run"],
+                "withArg": ["--directory", "--project", "-C", "-P"],
+                "positionals": 0,
+                "chdirOptions": ["--directory", "-C"],
+                "commandOptions": []
+            },
+            "pnpm": {
+                "subcommands": ["dlx", "exec"],
+                "withArg": ["--dir", "--filter", "-C", "-F"],
+                "positionals": 0,
+                "chdirOptions": ["--dir", "-C"],
+                "commandOptions": ["--shell-mode", "-c"]
+            },
+            "bundle": {
+                "subcommands": ["exec"],
+                "withArg": [],
+                "positionals": 0,
+                "chdirOptions": [],
+                "commandOptions": []
+            },
+            "pipenv": {
+                "subcommands": ["run"],
+                "withArg": [],
+                "positionals": 0,
+                "chdirOptions": [],
+                "commandOptions": []
+            },
+            "conda": {
+                "subcommands": ["run"],
+                "withArg": ["--name", "--prefix", "-n", "-p"],
+                "positionals": 0,
+                "chdirOptions": [],
+                "commandOptions": []
+            }
+        },
+        "CLI_OPTIONS_WITH_VALUE": {
+            "npm": [
+                "--access",
+                "--auth-type",
+                "--cache",
+                "--globalconfig",
+                "--include",
+                "--loglevel",
+                "--omit",
+                "--otp",
+                "--prefix",
+                "--registry",
+                "--scope",
+                "--tag",
+                "--userconfig",
+                "--workspace",
+                "-w"
+            ],
+            "pnpm": [
+                "--access",
+                "--dir",
+                "--filter",
+                "--loglevel",
+                "--otp",
+                "--publish-branch",
+                "--registry",
+                "--report-summary",
+                "--tag",
+                "-C",
+                "-F"
+            ],
+            "yarn": ["--access", "--cwd", "--new-version", "--otp", "--registry", "--tag"],
+            "bun": ["--access", "--config", "--cwd", "--otp", "--registry", "--tag", "-c"],
+            "cargo": [
+                "--color",
+                "--config",
+                "--features",
+                "--index",
+                "--jobs",
+                "--manifest-path",
+                "--package",
+                "--registry",
+                "--target",
+                "--target-dir",
+                "--token",
+                "-C",
+                "-F",
+                "-Z",
+                "-j",
+                "-p"
+            ],
+            "gem": ["--host", "--key", "--otp", "-k"],
+            "twine": [
+                "--cert",
+                "--client-cert",
+                "--comment",
+                "--config-file",
+                "--identity",
+                "--password",
+                "--repository",
+                "--repository-url",
+                "--sign-with",
+                "--username",
+                "-c",
+                "-i",
+                "-p",
+                "-r",
+                "-u"
+            ],
+            "uv": [
+                "--cache-dir",
+                "--check-url",
+                "--config-file",
+                "--directory",
+                "--index",
+                "--password",
+                "--project",
+                "--publish-url",
+                "--token",
+                "--trusted-publishing",
+                "--username",
+                "-p",
+                "-t",
+                "-u"
+            ],
+            "poetry": [
+                "--cert",
+                "--client-cert",
+                "--directory",
+                "--password",
+                "--project",
+                "--repository",
+                "--username",
+                "-C",
+                "-P",
+                "-p",
+                "-r",
+                "-u"
+            ],
+            "pdm": ["--password", "--project", "--repository", "--username", "-P", "-p", "-r", "-u"],
+            "hatch": ["--auth", "--env", "--repo", "--user", "-a", "-e", "-r", "-u"],
+            "mvn": [
+                "--activate-profiles",
+                "--file",
+                "--global-settings",
+                "--projects",
+                "--resume-from",
+                "--settings",
+                "--threads",
+                "--toolchains",
+                "-P",
+                "-T",
+                "-f",
+                "-gs",
+                "-pl",
+                "-rf",
+                "-s",
+                "-t"
+            ],
+            "gradle": [
+                "--exclude-task",
+                "--gradle-user-home",
+                "--init-script",
+                "--project-dir",
+                "--settings-file",
+                "-I",
+                "-c",
+                "-g",
+                "-p",
+                "-x"
+            ],
+            "docker": [
+                "--config",
+                "--context",
+                "--host",
+                "--log-level",
+                "--tlscacert",
+                "--tlscert",
+                "--tlskey",
+                "-H",
+                "-c",
+                "-l"
+            ],
+            "podman": ["--connection", "--identity", "--log-level", "--root", "--runroot", "--url", "-c"],
+            "helm": [
+                "--kube-apiserver",
+                "--kube-context",
+                "--kube-token",
+                "--kubeconfig",
+                "--namespace",
+                "--registry-config",
+                "--repository-cache",
+                "--repository-config",
+                "-n"
+            ],
+            "gh": ["--hostname", "--repo", "-R"],
+            "gradlew": [
+                "--exclude-task",
+                "--gradle-user-home",
+                "--init-script",
+                "--project-dir",
+                "--settings-file",
+                "-I",
+                "-c",
+                "-g",
+                "-p",
+                "-x"
+            ],
+            "buildah": ["--connection", "--identity", "--log-level", "--root", "--runroot", "--url", "-c"],
+            "systemctl": [
+                "--host",
+                "--lines",
+                "--machine",
+                "--output",
+                "--property",
+                "--root",
+                "--signal",
+                "--state",
+                "--type",
+                "-H",
+                "-M",
+                "-n",
+                "-o",
+                "-p",
+                "-s",
+                "-t"
+            ]
+        },
+        "SHELL_COMMAND_OPTIONS": { "fish": ["--command", "--init-command", "-C", "-c"] },
+        "SHELL_EXTRA_OPTIONS_WITH_ARG": {
+            "fish": [
+                "--debug",
+                "--debug-output",
+                "--features",
+                "--profile",
+                "--profile-startup",
+                "-d",
+                "-f",
+                "-o",
+                "-p"
+            ]
+        },
+        "SHELL_OPTIONS_WITH_ARG": ["+O", "+o", "--init-file", "--rcfile", "-O", "-o"],
+        "SSH_OPTIONS_WITH_ARG": [
+            "-B",
+            "-D",
+            "-E",
+            "-F",
+            "-I",
+            "-J",
+            "-L",
+            "-O",
+            "-P",
+            "-Q",
+            "-R",
+            "-S",
+            "-W",
+            "-b",
+            "-c",
+            "-e",
+            "-i",
+            "-l",
+            "-m",
+            "-o",
+            "-p",
+            "-w"
+        ],
+        "STDIN_PATHS": ["-", "/dev/fd/0", "/dev/stdin", "/proc/self/fd/0"],
+        "SHELLS": ["ash", "bash", "dash", "fish", "ksh", "mksh", "posh", "sh", "yash", "zsh"],
+        "RESERVED_PREFIXES": [
+            "!",
+            "coproc",
+            "do",
+            "done",
+            "elif",
+            "else",
+            "fi",
+            "if",
+            "then",
+            "time",
+            "until",
+            "while",
+            "{",
+            "}"
+        ]
+    },
+    "sources": [
+        { "args": [], "result": [] },
+        { "args": ["--"], "result": [] },
+        { "args": ["--", "f", "a"], "result": ["f", "a"] },
+        { "args": ["f", "--"], "result": ["f", "--"] },
+        { "args": ["f", "a"], "result": ["f", "a"] },
+        { "args": ["-", "a"], "result": ["-", "a"] }
+    ]
+}
