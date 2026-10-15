@@ -32,17 +32,19 @@ export function transcriptOf(messages: readonly SessionMessage[]): Transcript {
     return { latestPrompt, recentBashCommands };
 }
 
+async function readTranscript($: EngineInterface, input: HookInput): Promise<Transcript | undefined> {
+    try {
+        const messages = input.agentId
+            ? await $.session.messages({ agentId: input.agentId })
+            : await $.session.messages();
+        if ("deny" in messages) return undefined;
+        return transcriptOf(messages);
+    } catch {
+        return undefined;
+    }
+}
+
 /** A reader over the engine's session; never rejects (the judge then has no context). */
 export function engineTranscriptReader($: EngineInterface): TranscriptReader {
-    return async (input: HookInput) => {
-        try {
-            const messages = input.agentId
-                ? await $.session.messages({ agentId: input.agentId })
-                : await $.session.messages();
-            if ("deny" in messages) return undefined;
-            return transcriptOf(messages);
-        } catch {
-            return undefined;
-        }
-    };
+    return (input: HookInput) => readTranscript($, input);
 }
