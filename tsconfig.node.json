@@ -12,5 +12,11 @@
         "skipLibCheck": true
     },
     "include": ["src", "scripts", "tests"],
-    "exclude": ["hooks", "node_modules", "**/*.test.ts", "src/host/engine-host.ts"]
+    "exclude": [
+        "hooks",
+        "node_modules",
+        "**/*.test.ts",
+        "src/host/engine-host.ts",
+        "src/host/engine-transcript.ts"
+    ]
 }
