@@ -147,3 +147,22 @@ imported by its mapped file name and the camelCased Python name, exactly as
 the Python import spells it (`from shell_expand import command_output`
 becomes `import { commandOutput } from "./expand.ts"`). The integration pass
 reconciles any name that drifted.
+
+## What the engine reads off the hooks module
+
+`claude plugin validate` and the engine itself read the hooks module and
+every file it imports to list what the mod calls on `$`, before any code
+runs. Three rules follow, and the engine refuses to load a module that
+breaks them:
+
+- `$` is only ever spelled `$.noun.method(...)` at a call site, or passed
+  as an argument to a function declared at the top of a file of the module
+  (a `function` declaration or a `const` bound to one). It is never stored
+  in a field, returned, spread or captured by a class. That is why
+  `src/host/engine-host.ts` is a set of top-level functions taking `$`
+  rather than a class holding it.
+- `$.env.get(name)` takes a string literal. The environment snapshot in
+  `engine-host.ts` therefore spells one call per name in `KNOWN_ENV_NAMES`;
+  `src/host/env-names.spec.ts` fails when the two lists drift.
+- `hooks/*.test.ts` files are the engine kit's (`claude plugin test .`);
+  vitest collects only `*.spec.ts`.

@@ -121,11 +121,23 @@ bun run test:mod    # claude plugin test: the hooks module against the engine
 bun run validate    # claude plugin validate
 ```
 
-`scripts/replay-ccsafety.ts` replays cc-safety-net's harvested verdict
-labels through the guards in-process and compares the decisions with the
-Python hooks' replay (see `docs/cc-safety-net-coverage.md` in
-`claude-code-rules`). `scripts/judge-probe.ts` and `scripts/jev-calibrate.ts`
-need network access and a gateway credential; they are benchmarks, not tests.
+### Parity with the Python hooks
+
+The port is checked against the Python hooks three ways:
+
+- Every Python test corpus runs as a vitest spec (7,648 tests), and the
+  parser modules compare their output on about 1,000 corpus commands with
+  fixtures the Python modules generated (`scripts/parity/gen-*-fixture.py`).
+- `scripts/replay-ccsafety.ts` replays cc-safety-net's 6,965 harvested
+  verdict labels (upstream commit `0626be7a`) through the four deterministic
+  guards in-process and, with `--compare`, diffs each literal's decision,
+  per-guard verdicts and judge eligibility against the Python replay
+  (`python3 scripts/replay_ccsafety.py` in `claude-code-rules`). At the
+  time of the port the two agree on all 6,965 rows: 695 deny, 255 ask and
+  486 defer on upstream's deny label; 70, 213 and 5,241 on its allow label.
+- `scripts/judge-probe.ts` and `scripts/jev-calibrate.ts` are the Python
+  probe and calibration harnesses. They need network access and a gateway
+  credential; they are benchmarks, not tests.
 
 ## Where it runs
 

@@ -13,7 +13,6 @@
 import type { EngineInterface } from "claude-code";
 import { dirname } from "../util/paths.ts";
 import type { DirEntry, FileStat, Host, HttpReply, HttpRequest, RunOptions, RunResult } from "./host.ts";
-import { KNOWN_ENV_NAMES } from "./host.ts";
 
 async function snapshotEnvironment($: EngineInterface): Promise<Map<string, string>> {
     const environment = new Map<string, string>();
