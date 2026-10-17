@@ -6,7 +6,7 @@
 
 import { describe, expect, it } from "vitest";
 import { decide } from "../chain.ts";
-import { resolveConfig } from "../config.ts";
+import { DEFAULT_JEV_MODEL, resolveConfig } from "../config.ts";
 import type { HookInput } from "../decision.ts";
 import type { GuardDeps, Transcript } from "../guards/guard.ts";
 import type { HttpReply, HttpRequest } from "../host/host.ts";
@@ -370,6 +370,7 @@ describe("bashRiskJudge.run: fallbacks", () => {
         expect(fallbacks[0]?.decision).toBe("defer");
         expect(fallbacks[0]?.hook).toBe(HOOK_NAME);
         expect(fallbacks[0]?.command).toBe("git clean -xdf");
+        expect(fallbacks[0]?.model).toBe(DEFAULT_JEV_MODEL);
         expect(String(fallbacks[0]?.error)).toContain("did not complete");
     });
 
@@ -469,7 +470,14 @@ describe("bashRiskJudge.run: the audit record", () => {
         expect(record?.context).toEqual({ task: true, recent: 1, sources: [] });
         expect(record?.answers).toEqual(SUCCESS.answers);
         expect(record?.usage).toEqual(SUCCESS.usage);
+        expect(record?.model).toBe(DEFAULT_JEV_MODEL);
         expect(typeof record?.ts).toBe("string");
+    });
+
+    it("names the configured model, so the log shows which version answered", async () => {
+        const { run, records } = harness({ env: { HOOK_JEV_MODEL: "typesafe-ai/jev-1.14.0" } });
+        await run("git clean -xdf");
+        expect(records()[0]?.model).toBe("typesafe-ai/jev-1.14.0");
     });
 
     it("truncates a long command in the record", async () => {

@@ -288,6 +288,7 @@ async function run(input: HookInput, deps: GuardDeps): Promise<Decision | undefi
             await log(host, deps, {
                 decision: "defer",
                 outcome: "fallback",
+                model: config.judge.model,
                 command: truncate(redact(command)),
                 error,
             });
@@ -298,6 +299,7 @@ async function run(input: HookInput, deps: GuardDeps): Promise<Decision | undefi
     const reason = escalationReason(evaluation, config.judge.askThreshold);
     await log(host, deps, {
         decision: reason ? "ask" : "defer",
+        model: config.judge.model,
         command: truncate(redact(command)),
         context: {
             task: Boolean(context.task),
