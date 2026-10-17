@@ -144,13 +144,11 @@ async function listDirectory($: EngineInterface, path: string): Promise<readonly
     try {
         const entries = await $.fs.list(path);
         return entries
-            .map(
-                (entry): DirEntry => ({
-                    name: entry.name,
-                    kind: entry.kind === "file" || entry.kind === "dir" ? entry.kind : "other",
-                    isLink: entry.isLink,
-                }),
-            )
+            .map((entry): DirEntry => ({
+                name: entry.name,
+                kind: entry.kind === "file" || entry.kind === "dir" ? entry.kind : "other",
+                isLink: entry.isLink,
+            }))
             .sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
     } catch {
         return undefined;

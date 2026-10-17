@@ -163,7 +163,7 @@ export function arithmeticSubstitutions(
  * word, the surrounding text joins the first and last. undefined if not that shape.
  */
 export function atWordPieces(token: Word, ctx: Context): Word[] | undefined {
-    // biome-ignore lint/suspicious/noTemplateCurlyInString: shell syntax, not a template
+    // Shell syntax, not a template
     const marker = ["${@}", "$@"].find((m) => token.text.includes(m));
     const params = marker !== undefined ? positionals(ctx) : null;
     if (marker === undefined || params === null || token.text.split(marker).length !== 2) return undefined;

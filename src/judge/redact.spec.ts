@@ -1,5 +1,5 @@
 /** The REDACTIONS corpus of bash_risk_judge_test.py, plus the context tests' redaction expectations. */
-// biome-ignore-all lint/suspicious/noTemplateCurlyInString: the commands under test spell shell parameter expansions
+// The commands under test spell shell parameter expansions
 
 import { describe, expect, it } from "vitest";
 import { quotedSpans, REDACTED, redact } from "./redact.ts";

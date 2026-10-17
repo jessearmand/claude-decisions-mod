@@ -700,7 +700,7 @@ function findDeletes(args: readonly string[]): boolean {
 }
 
 async function isTemp(path: string, cwd: string, host: Host): Promise<boolean> {
-    // biome-ignore lint/suspicious/noTemplateCurlyInString: a shell spelling of TMPDIR, not a template
+    // A shell spelling of TMPDIR, not a template
     if (path.startsWith("$TMPDIR") || path.startsWith("${TMPDIR}")) return true;
     const resolved = await host.realPath(expand(path, cwd, host.home));
     for (const root of TEMP_ROOTS) {

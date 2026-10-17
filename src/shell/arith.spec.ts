@@ -31,7 +31,7 @@ const CASES: ReadonlyArray<readonly [string, bigint | undefined]> = [
     ["3>2&&2>3", 0n],
     ["0||4", 1n],
     ["i+1", 2n],
-    // biome-ignore lint/suspicious/noTemplateCurlyInString: shell syntax, not a template
+    // Shell syntax, not a template
     ["$i*${n}", 3n],
     ["j", 2n],
     ["e+1", 1n],

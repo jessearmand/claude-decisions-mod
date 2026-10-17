@@ -963,8 +963,7 @@ function tarArchive(args: readonly string[]): string | undefined {
         if (arg.startsWith("--")) continue;
         let cluster: string;
         if (arg.startsWith("-")) cluster = arg.slice(1);
-        else if (index === 0)
-            cluster = arg; // old style: `tar xzf FILE`
+        else if (index === 0) cluster = arg; // old style: `tar xzf FILE`
         else continue;
         if (cluster.includes("f")) {
             const attached = cluster.slice(cluster.indexOf("f") + 1);

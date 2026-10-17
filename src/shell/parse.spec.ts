@@ -1,5 +1,5 @@
 /** Tests for the lexer and the parse driver, ported from shell_parse_test.py. */
-// biome-ignore-all lint/suspicious/noTemplateCurlyInString: the commands under test spell shell parameter expansions
+// The commands under test spell shell parameter expansions
 
 import { describe, expect, it } from "vitest";
 import { memoryHost } from "../host/memory-host.ts";

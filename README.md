@@ -75,8 +75,8 @@ The judge is off until enabled. It sends the (redacted) command, the
 user's latest prompt, the agent's last few commands and the body of any
 script the command runs to `POST https://ai-gateway.vercel.sh/v1/evaluate`
 with typed boolean and choice questions, and reads back calibrated
-probabilities. Credentials are, in order: the `jevApiKey` option,
-`AI_GATEWAY_API_KEY`, `VERCEL_OIDC_TOKEN`, or `fnox` (pointed at
+probabilities. Credentials are, in order: `AI_GATEWAY_API_KEY`,
+`VERCEL_OIDC_TOKEN`, the `jevApiKey` option, or `fnox` (pointed at
 `HOOK_JEV_FNOX_CONFIG`). Every failure (no key, timeout, bad JSON) defers.
 
 Any gateway decision model works in place of Jev, for example
@@ -115,7 +115,8 @@ Each guard also has a `*_DISABLE` environment switch
 ```
 bun install
 bun run typecheck   # tsc against the engine's types and against Node
-bun run lint        # biome
+bun run lint        # oxlint + oxfmt --check
+bun run format      # oxfmt --write (lint:fix also applies oxlint fixes)
 bun run test        # vitest: the ported Python corpora and parity fixtures
 bun run test:mod    # claude plugin test: the hooks module against the engine
 bun run validate    # claude plugin validate

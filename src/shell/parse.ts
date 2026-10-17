@@ -135,7 +135,7 @@ const MAX_VARIANTS = 64;
 const MAX_VALUES = 64;
 const MAX_VALUE_CHARS = 1024 * 1024;
 /** The words that expand to every positional parameter. */
-// biome-ignore lint/suspicious/noTemplateCurlyInString: shell parameter spellings, not templates
+// Shell parameter spellings, not templates
 const ALL_PARAMETERS: ReadonlySet<string> = new Set(["$@", "${@}", "$*", "${*}"]);
 
 /** Every simple command `command` would run. Never throws. */

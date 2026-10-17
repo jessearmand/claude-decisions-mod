@@ -184,7 +184,7 @@ describe("expandWord", () => {
     it("remembers a default assignment and keeps unknown names dynamic", async () => {
         const ctx = makeContext({}, "/work");
         const word = await expandWord(
-            // biome-ignore lint/suspicious/noTemplateCurlyInString: shell syntax, not a template
+            // Shell syntax, not a template
             new Word("${OUT:=$HOME/.claude/settings.json}", { dynamic: true }),
             ctx,
         );

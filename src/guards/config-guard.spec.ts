@@ -7,7 +7,7 @@
  */
 
 import { execFileSync } from "node:child_process";
-import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, realpathSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
@@ -155,7 +155,8 @@ describe("config-guard", () => {
     }
 
     beforeAll(() => {
-        root = mkdtempSync(join(tmpdir(), "config-guard-"));
+        // Resolved, so a symlinked temp dir (macOS /var -> /private/var) adds no extra path form.
+        root = realpathSync(mkdtempSync(join(tmpdir(), "config-guard-")));
         project = join(root, "project");
         home = join(root, "home");
         // A machine with Claude Code installed: the hooks directory exists under ~/.claude.

@@ -1,0 +1,14 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["typescript", "unicorn", "oxc", "import", "vitest"],
+    "categories": {
+        "correctness": "error"
+    },
+    "ignorePatterns": ["**/.claude-plugin/types", "**/scratchpad", "**/__fixtures__"],
+    "rules": {
+        "no-control-regex": "off",
+        "unicorn/no-useless-spread": "off",
+        "vitest/no-conditional-expect": "off",
+        "vitest/valid-expect": ["error", { "maxArgs": 2 }]
+    }
+}

@@ -184,7 +184,7 @@ function report(
                 const hits = answersOf(model, i)
                     .map((a) => caught(a, concerns, threshold))
                     .filter((h): h is boolean => h !== undefined);
-                if (hits.length > 0 && hits.some(Boolean)) anyHit += 1;
+                if (hits.some(Boolean)) anyHit += 1;
                 const consistent = hits.length > 0 && hits.every(Boolean);
                 if (consistent) allHit += 1;
                 if (consistent && !guarded(i)) fresh += 1;

@@ -334,7 +334,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
         HIGH,
         String.raw`\bprintenv\b|(?:^|[;|&])\s*env\b\s*(?:$|[;|&])`,
         "Dumping the environment may expose secrets",
-        // biome-ignore lint/suspicious/noTemplateCurlyInString: shell syntax in the hint, not a template
+        // Shell syntax in the hint, not a template
         'Check for one specific variable instead, e.g. `test -n "${KEY:-}" && echo set`.',
     ),
     commandRule(
@@ -343,7 +343,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
         String.raw`${HEAD}(?:echo|printf|print)\b[^;|&]*\$\{?[A-Za-z_]*(?:SECRET|APIKEY|API_KEY|KEY|TOKEN` +
             String.raw`|PASSWORD|PASSWD|PASS|CREDENTIAL|AUTH|PRIVATE|SALT)[A-Za-z_]*\}?`,
         "Echoing a secret-looking variable",
-        // biome-ignore lint/suspicious/noTemplateCurlyInString: shell syntax in the hint, not a template
+        // Shell syntax in the hint, not a template
         'Test whether it is set without printing it: `[ -n "${VAR:-}" ]`.',
     ),
     commandRule(

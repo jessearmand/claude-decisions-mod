@@ -349,13 +349,13 @@ describe("commands run from files the agent did not type here -> ask", () => {
     // target, and recipes run what their variables hold (PR review).
     const expansions: Record<string, string> = {
         shell: "X := $(shell rm -rf victim)\nall:\n\t@echo hi\n",
-        // biome-ignore lint/suspicious/noTemplateCurlyInString: Make syntax, not a template
+        // Make syntax, not a template
         braces: "X = ${shell rm -rf victim}\nall:\n\t@echo hi\n",
         bang: "X != rm -rf victim\nall:\n\t@echo hi\n",
         conditional: "ifeq ($(shell rm -rf victim),)\nendif\nall:\n\t@echo hi\n",
         variable: "CLEAN = rm -rf\nTARGET := victim\nall:\n\t$(CLEAN) $(TARGET)\n",
         nested: "A = $(B)\nB = rm -rf victim\nall:\n\t$(A)\n",
-        // biome-ignore lint/suspicious/noTemplateCurlyInString: Make syntax, not a template
+        // Make syntax, not a template
         appended: "FLAGS = -r\nFLAGS += -f\nall:\n\trm ${FLAGS} victim\n",
         "recipe-shell": "all:\n\techo $(shell rm -rf victim)\n",
     };

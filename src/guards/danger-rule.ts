@@ -143,7 +143,7 @@ export function operands(args: readonly string[], withArg: ReadonlySet<string> =
 
 /** `os.path.normpath(expanduser(path))` against `cwd`; `$HOME` and `${HOME}` read as `~`. */
 export function expand(path: string, cwd: string, home: string): string {
-    // biome-ignore lint/suspicious/noTemplateCurlyInString: a shell spelling of HOME, not a template
+    // A shell spelling of HOME, not a template
     const expanded = expanduser(path.replaceAll("${HOME}", "~").replaceAll("$HOME", "~"), home);
     return normpath(isAbsolute(expanded) ? expanded : join(cwd, expanded));
 }

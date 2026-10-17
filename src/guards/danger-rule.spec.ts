@@ -87,7 +87,7 @@ describe("expand, isInside and isBroadTarget", () => {
         expect(expand("~", "/proj", HOME)).toBe(HOME);
         expect(expand("~/x", "/proj", HOME)).toBe(`${HOME}/x`);
         expect(expand("$HOME/x", "/proj", HOME)).toBe(`${HOME}/x`);
-        // biome-ignore lint/suspicious/noTemplateCurlyInString: a shell spelling of HOME, not a template
+        // A shell spelling of HOME, not a template
         expect(expand("${HOME}/x/../y", "/proj", HOME)).toBe(`${HOME}/y`);
         expect(expand("a/../b", "/proj", HOME)).toBe("/proj/b");
         expect(expand(".", "/proj", HOME)).toBe("/proj");
