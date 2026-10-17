@@ -106,10 +106,22 @@ export const EXEMPT_COMMAND_HEADS = rx(
 // match, and routine work on them gets blocked as if they held credentials.
 const SECRET_NAME = String.raw`(?<![\w.-])(?:secrets?|credentials?)(?:\.(?:json|ya?ml|toml|ini))?\b`;
 
+// `.env` must start a path component, as in the env-file path rule: never the
+// tail of an identifier or a regex. Without the lookbehind, searches such as
+// `rg 'process.env.HOME' src` or `rg '\.env'` read as greps of a .env file.
+const ENV_FILE = String.raw`(?<![\w.\\-])\.env\b`;
+
+// A whole variable name that looks secret. `${NAME:+word}` and `${NAME+word}`
+// expand to `word`, never the value, so the echo rule passes them over; the
+// trailing lookahead keeps backtracking from ending the name early to get there.
+const SECRET_VAR =
+    String.raw`[A-Za-z_]*(?:SECRET|APIKEY|API_KEY|KEY|TOKEN|PASSWORD|PASSWD|PASS|CREDENTIAL|AUTH|PRIVATE|SALT)` +
+    String.raw`\w*(?!\w)`;
+
 // Reusable fragment: a token that names something secret. Used by rules that
 // would otherwise fire on entirely innocent pipelines.
 const SECRET_TOKEN =
-    String.raw`(?:\.envrc\b|\.env\b|${SECRET_NAME}|id_rsa\b|id_ed25519\b|id_ecdsa\b` +
+    String.raw`(?:(?<![\w.\\-])\.envrc\b|${ENV_FILE}|${SECRET_NAME}|id_rsa\b|id_ed25519\b|id_ecdsa\b` +
     String.raw`|id_dsa\b|\.pem\b|\.key\b|\.netrc\b|authorized_keys\b|\.p12\b|\.pfx\b|\.pgpass\b` +
     String.raw`|\.git-credentials\b|\.credentials\.json\b)`;
 
@@ -298,7 +310,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "read-env",
         CRITICAL,
-        String.raw`${HEAD}${READERS}\s+${SEG}\.env\b`,
+        String.raw`${HEAD}${READERS}\s+${SEG}${ENV_FILE}`,
         "Reading a .env file exposes secrets",
         ENV_SAFE_HINT,
     ),
@@ -323,7 +335,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "edit-env",
         CRITICAL,
-        String.raw`${HEAD}${EDITORS}\s+${SEG}\.env\b`,
+        String.raw`${HEAD}${EDITORS}\s+${SEG}${ENV_FILE}`,
         "Opening a .env file in an editor",
         ENV_WRITE_HINT,
     ),
@@ -340,8 +352,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "echo-secret-var",
         HIGH,
-        String.raw`${HEAD}(?:echo|printf|print)\b[^;|&]*\$\{?[A-Za-z_]*(?:SECRET|APIKEY|API_KEY|KEY|TOKEN` +
-            String.raw`|PASSWORD|PASSWD|PASS|CREDENTIAL|AUTH|PRIVATE|SALT)[A-Za-z_]*\}?`,
+        String.raw`${HEAD}(?:echo|printf|print)\b[^;|&]*\$(?:${SECRET_VAR}|\{${SECRET_VAR}(?!:?\+)[^}]*\})`,
         "Echoing a secret-looking variable",
         // Shell syntax in the hint, not a template
         'Test whether it is set without printing it: `[ -n "${VAR:-}" ]`.',
@@ -361,7 +372,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "source-env",
         HIGH,
-        String.raw`${HEAD}source\s+${SEG}\.env\b|(?:^|[;|&]\s*)\.\s+${SEG}\.env\b`,
+        String.raw`${HEAD}source\s+${SEG}${ENV_FILE}|(?:^|[;|&]\s*)\.\s+${SEG}${ENV_FILE}`,
         "Sourcing a .env file loads secrets into the shell",
     ),
     commandRule(
@@ -375,7 +386,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "grep-env",
         HIGH,
-        String.raw`${HEAD}(?:grep|rg|ag|ack|sift|ugrep)\b${SEG}\.env\b`,
+        String.raw`${HEAD}(?:grep|rg|ag|ack|sift|ugrep)\b${SEG}${ENV_FILE}`,
         "Grepping a .env file prints matching secret lines",
         ENV_SAFE_HINT,
     ),
@@ -446,21 +457,21 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "write-env-redirect",
         HIGH,
-        String.raw`>>?\s*\S*\.env\b`,
+        String.raw`>>?\s*\S*${ENV_FILE}`,
         "Redirecting output into a .env file",
         ENV_WRITE_HINT,
     ),
     commandRule(
         "tee-env",
         HIGH,
-        String.raw`${HEAD}tee\b${SEG}\S*\.env\b`,
+        String.raw`${HEAD}tee\b${SEG}\S*${ENV_FILE}`,
         "Writing a .env file via tee",
         ENV_WRITE_HINT,
     ),
     commandRule(
         "sed-inplace-env",
         HIGH,
-        String.raw`${HEAD}sed\b${SEG}-i${SEG}\.env\b`,
+        String.raw`${HEAD}sed\b${SEG}-i${SEG}${ENV_FILE}`,
         "Editing a .env file in place",
         ENV_WRITE_HINT,
     ),
@@ -469,7 +480,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "touch-env",
         HIGH,
-        String.raw`${HEAD}touch\b${SEG}\S*\.env\b`,
+        String.raw`${HEAD}touch\b${SEG}\S*${ENV_FILE}`,
         "Creating a .env file",
         ENV_WRITE_HINT,
     ),
@@ -483,7 +494,7 @@ export const SECRET_COMMANDS: readonly CommandRule[] = [
     commandRule(
         "truncate-secret",
         HIGH,
-        String.raw`${HEAD}truncate\b${SEG}\.(?:env|pem|key)\b|(?:^|[;|&]\s*)>\s*\S*\.env\b`,
+        String.raw`${HEAD}truncate\b${SEG}\.(?:env|pem|key)\b|(?:^|[;|&]\s*)>\s*\S*${ENV_FILE}`,
         "Truncating a secret file",
     ),
 

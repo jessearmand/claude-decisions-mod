@@ -129,6 +129,16 @@ on a synchronous filesystem probe, make the same probe through the host.
 Where Python code catches `OSError` and skips, the host's `undefined` answer
 skips the same way. Do not add rules, rename rule ids or soften decisions.
 
+Deliberate deviations, each with corpus cases in
+`src/guards/__fixtures__/secrets-cases.ts` (the Python hooks still have the
+original behaviour):
+
+- secrets-guard's `.env` command rules match `.env` only at the start of a
+  path component, as the `env-file` path rule does, so `rg 'process.env.HOME'`,
+  `rg '\.env'` and `cat src/process.env.ts` no longer read as `.env` access.
+- `echo-secret-var` ignores `${NAME:+word}` and `${NAME+word}`, which expand
+  to `word` and never print the value.
+
 ## Import cycles
 
 The Python stages import `parse`/`_parse_into` lazily inside functions to
