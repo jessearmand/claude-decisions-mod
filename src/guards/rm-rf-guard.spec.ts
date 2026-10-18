@@ -531,3 +531,53 @@ describe("commands run from files the agent did not type here -> ask", () => {
         expect(asked?.reason).toContain("do not edit the script to get around this");
     });
 });
+
+describe("project scratchpad", () => {
+    const project = tempDir("rm-rf-guard-scratchpad");
+    const outside = tempDir("rm-rf-guard-outside");
+    write(project, "scratchpad/split/tree/a.rs", "");
+    write(project, "pkg/scratchpad/out/b.txt", "");
+    write(project, "src/main.rs", "");
+    write(project, "scratch-notes/n.txt", "");
+    write(outside, "keep.txt", "");
+    mkdirSync(join(project, "linked"), { recursive: true });
+    symlinkSync(outside, join(project, "linked", "scratchpad"));
+    write(
+        project,
+        "scratchpad/split/stage.sh",
+        "validate() {\n  rm -rf scratchpad/split/tree && git checkout-index -a --prefix=scratchpad/split/tree/\n}\n",
+    );
+
+    it.each([
+        "rm -rf scratchpad/split/tree",
+        "rm -rf scratchpad",
+        "rm -rf scratchpad/*",
+        "rm -rf ./scratchpad/split/tree scratchpad/missing",
+        "rm -rf pkg/scratchpad/out",
+        "cd pkg && rm -rf scratchpad/out",
+        "source scratchpad/split/stage.sh && validate",
+    ])("%j -> defer", async (command) => {
+        expect(await hook(command, project)).toBeUndefined();
+        expect(await hook(command, project, "bypassPermissions")).toBeUndefined();
+    });
+
+    it.each([
+        "rm -rf scratchpad/split/tree src",
+        "rm -rf scratchpad/../src",
+        // The glob matches scratch-notes as well as scratchpad.
+        "rm -rf scratch*",
+        "rm -rf scratchpad-old",
+        'rm -rf "$D"/scratchpad',
+        "rm -rf linked/scratchpad/keep.txt",
+        `rm -rf ${outside}/scratchpad`,
+        "cd .. && rm -rf scratchpad",
+    ])("%j -> ask", async (command) => {
+        expect(await decisionOf(command, project)).toBe("ask");
+    });
+
+    it("names only the removals outside the scratchpad", async () => {
+        const reason = await reasonOf("rm -rf scratchpad/split/tree; rm -rf src", project);
+        expect(reason).toContain("  rm -rf src\n");
+        expect(reason).not.toContain("rm -rf scratchpad/split/tree");
+    });
+});

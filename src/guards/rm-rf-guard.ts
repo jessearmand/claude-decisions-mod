@@ -15,6 +15,11 @@
  *
  * An `ask` shows the reason to the user, who confirms or declines. `undefined`
  * defers to the normal permission flow.
+ *
+ * One exception: an `rm -rf` whose every target lies in a `scratchpad`
+ * directory inside the project defers. The agent keeps its own temporary
+ * work there and clears it as it goes; asking each time teaches the user to
+ * approve `rm -rf` without reading it.
  */
 
 import { commandOf, type Decision, decision, type HookInput } from "../decision.ts";
@@ -230,6 +235,44 @@ function analysisCwd(invocation: RmInvocation, cwd: string): string {
     return invocation.targets.length > 0 ? "/" : cwd;
 }
 
+/** The directory an agent keeps its temporary work in, inside a project. */
+export const SCRATCH_DIR = "scratchpad";
+
+/**
+ * Whether `target`, run from `cwd`, lies in a scratchpad directory of the
+ * project at `projectDir`: `scratchpad`, `scratchpad/x` or `pkg/scratchpad/x`,
+ * with every symbolic link followed, so a `scratchpad` linking out of the
+ * project does not count. A glob counts by the directories before its first
+ * wildcard (`scratchpad/*` does, `scratch*` does not); a target holding an
+ * unexpanded variable never does.
+ */
+export async function inProjectScratchpad(
+    target: string,
+    cwd: string,
+    projectDir: string,
+    host: Host,
+): Promise<boolean> {
+    if (UNEXPANDED_VARIABLE.test(target)) return false;
+    const segments = target.split("/");
+    const firstGlob = segments.findIndex((segment) => GLOB_METACHARACTERS.test(segment));
+    const fixed = firstGlob < 0 ? target : segments.slice(0, firstGlob).join("/");
+    if (fixed === "") return false;
+    const project = await host.realPath(normpath(projectDir));
+    const resolved = await host.realPath(resolveTarget(fixed, cwd, host.home));
+    if (!resolved.startsWith(`${project.replace(/\/+$/, "")}/`)) return false;
+    return resolved.slice(project.length).split("/").includes(SCRATCH_DIR);
+}
+
+/** Whether every target of `invocation` lies in a project scratchpad (see inProjectScratchpad). */
+async function scratchpadOnly(invocation: RmInvocation, projectDir: string, host: Host): Promise<boolean> {
+    if (invocation.uncertain || invocation.targets.length === 0) return false;
+    const cwd = analysisCwd(invocation, projectDir);
+    for (const target of invocation.targets) {
+        if (!(await inProjectScratchpad(target, cwd, projectDir, host))) return false;
+    }
+    return true;
+}
+
 /** Describe a target and name the least destructive command that removes it. */
 export async function analyzeTarget(target: string, cwd: string, host: Host): Promise<TargetAnalysis> {
     if (UNEXPANDED_VARIABLE.test(target)) {
@@ -395,13 +438,12 @@ async function run(input: HookInput, deps: GuardDeps): Promise<Decision | undefi
     if (!command) return undefined;
 
     const cwd = normpath(input.cwd);
-    const [invocations, unparseable] = await findRecursiveForceInvocations(
-        command,
-        cwd,
-        deps.host,
-        deps.sources,
-    );
-    if (invocations.length === 0) return undefined;
+    const [found, unparseable] = await findRecursiveForceInvocations(command, cwd, deps.host, deps.sources);
+    const invocations: RmInvocation[] = [];
+    for (const invocation of found) {
+        if (!(await scratchpadOnly(invocation, cwd, deps.host))) invocations.push(invocation);
+    }
+    if (invocations.length === 0 && !unparseable) return undefined;
 
     if (invocations.every((invocation) => invocation.uncertain) && !unparseable) {
         return decision(
