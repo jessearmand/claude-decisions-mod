@@ -1,0 +1,57 @@
+name: CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        env:
+            DISABLE_AUTOUPDATER: "1"
+            CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version-file: package.json
+
+            - name: Install dependencies
+              run: bun install --frozen-lockfile
+
+            - name: Typecheck
+              run: bun run typecheck
+
+            - name: Lint and format check
+              run: bun run lint
+
+            - name: Test
+              run: bun run test
+
+            # The committed engine types name the Claude Code version that wrote
+            # them on their first line; install that one so the mod is tested
+            # and validated against the same plugin API it is type-checked against.
+            - name: Install Claude Code
+              run: |
+                  version=$(head -n 1 .claude-plugin/types/claude-code/index.d.ts | sed -n 's/^\/\/ Written by Claude Code \([0-9][^ ]*\)\.$/\1/p')
+                  if [ -z "$version" ]; then
+                      echo "::error file=.claude-plugin/types/claude-code/index.d.ts::cannot read the Claude Code version from the first line"
+                      exit 1
+                  fi
+                  npm install --global "@anthropic-ai/claude-code@$version"
+                  claude --version
+
+            - name: Test the hooks module against the engine
+              run: bun run test:mod
+
+            - name: Validate the plugin
+              run: bun run validate

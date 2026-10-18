@@ -113,6 +113,13 @@ export interface SimpleCommandFields {
      * read a variable by name (`git --config-env=key=VAR`) look it up here.
      */
     readonly environment: Environment;
+    /**
+     * Arguments and redirect targets whose `$` or backtick is literal text
+     * (`sed -i '' '/x$/d' f`), not an expansion left unresolved. A text that
+     * some expansion on the command also produced is not listed. Empty when
+     * not known, which reads every `$` as computed.
+     */
+    readonly literals: ReadonlySet<string>;
 }
 
 /** One program invocation, wrappers removed. */
@@ -128,6 +135,7 @@ export class SimpleCommand implements SimpleCommandFields {
     readonly cwd: Directory;
     readonly cwdOptions: readonly Directory[];
     readonly environment: Environment;
+    readonly literals: ReadonlySet<string>;
 
     constructor(fields: Partial<SimpleCommandFields> & Pick<SimpleCommandFields, "argv">) {
         this.argv = fields.argv;
@@ -141,6 +149,7 @@ export class SimpleCommand implements SimpleCommandFields {
         this.cwd = fields.cwd ?? null;
         this.cwdOptions = fields.cwdOptions ?? [];
         this.environment = fields.environment ?? [];
+        this.literals = fields.literals ?? new Set();
     }
 
     /** `dataclasses.replace(command, ...)`. */
@@ -161,6 +170,7 @@ export class SimpleCommand implements SimpleCommandFields {
             cwd: this.cwd,
             cwdOptions: this.cwdOptions,
             environment: this.environment,
+            literals: this.literals,
         };
     }
 

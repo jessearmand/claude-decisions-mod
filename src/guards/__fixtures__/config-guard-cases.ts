@@ -122,6 +122,12 @@ export const BASH_CASES: readonly BashCase[] = [
     ["python3 -c 'import subprocess; subprocess.run([\"echo\", \"x\", \"printf x > ~/.claude/settings.json\"])'", "ask", "claude-settings"],
     ["python3 -c 'import subprocess; print(\"printf x > ~/.claude/settings.json\")'", "ask", "claude-settings"],
     ["cp payload.json \"$OUT\"", "ask", "unknown-target"],
+    // A single-quoted `$` is text, not an expansion: the path is known.
+    ["sed -i '' '/^pub mod media;$/d' src/mlx/mod.rs", undefined, undefined],
+    ["sed -i '/^pub mod media;$/d' src/mlx/mod.rs", undefined, undefined],
+    ["cp payload.json '$OUT'", undefined, undefined],
+    ["cp '$OUT' \"$OUT\"", "ask", "unknown-target"],
+    ["cp '$OUT' \"$OUT/settings.json\"", "ask", "unknown-target"],
     ["curl -s https://example.com/x > \"$OUT\"", "ask", "unknown-target"],
     ["curl -s https://example.com/x | tee \"$OUT\"", "ask", "unknown-target"],
     ["cat <<EOF > \"$CFG\"\n{\"hooks\": {}}\nEOF", "ask", "unknown-target"],

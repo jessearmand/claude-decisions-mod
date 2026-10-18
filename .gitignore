@@ -112,7 +112,5 @@ dist
 # TernJS port file
 .tern-port
 
-# Written by the Claude Code engine when it loads the mod; copied in for type-checking
-.claude-plugin/types/
 # Temporary work files
 scratchpad/

@@ -97,7 +97,10 @@ function booleanOption(options: RawOptions, key: string): boolean {
 }
 
 function numberOption(options: RawOptions, key: string): number | undefined {
-    const value = options[key];
+    return numberValue(options[key]);
+}
+
+function numberValue(value: RawOptions[string] | undefined): number | undefined {
     if (typeof value === "number" && Number.isFinite(value)) return value;
     if (typeof value === "string" && value.trim() !== "" && Number.isFinite(Number(value)))
         return Number(value);
@@ -114,6 +117,48 @@ function numberOf(envValue: string | undefined, optionValue: number | undefined,
     if (envValue !== undefined && envValue.trim() !== "" && Number.isFinite(Number(envValue)))
         return Number(envValue);
     return optionValue ?? fallback;
+}
+
+/** How an option reads its value, so an environment value can be compared with it. */
+type Reader = (value: RawOptions[string] | undefined) => string | number | undefined;
+
+const readNumber: Reader = numberValue;
+const readLevel: Reader = (value) => {
+    const level = typeof value === "string" ? value.trim().toLowerCase() : undefined;
+    return isLevel(level) ? level : undefined;
+};
+const readString: Reader = (value) => (typeof value === "string" && value !== "" ? value : undefined);
+
+/**
+ * Options an environment variable replaces outright, when both are set
+ * (`resolveConfig`'s precedence). Flags are left out: either one turns them
+ * on, so neither hides the other. The API key is left out: it is a secret.
+ */
+const ENV_OVERRIDES: ReadonlyArray<readonly [option: string, envName: string, read: Reader]> = [
+    ["askThreshold", "BASH_RISK_JUDGE_ASK_THRESHOLD", readNumber],
+    ["jevTimeoutSeconds", "HOOK_JEV_TIMEOUT", readNumber],
+    ["jevModel", "HOOK_JEV_MODEL", readString],
+    ["secretsLevel", "SECRETS_GUARD_LEVEL", readLevel],
+    ["dangerousLevel", "DANGEROUS_COMMANDS_LEVEL", readLevel],
+];
+
+/**
+ * One line per option set to a value that an environment variable replaces
+ * with a different one, e.g. askThreshold 0.75 under
+ * BASH_RISK_JUDGE_ASK_THRESHOLD=0.6. Empty when nothing is overridden.
+ */
+export function overriddenOptions(host: Host, options: RawOptions = {}): string[] {
+    const found: string[] = [];
+    for (const [option, envName, read] of ENV_OVERRIDES) {
+        const fromEnv = read(host.env(envName));
+        const fromOption = read(options[option]);
+        if (fromEnv === undefined || fromOption === undefined || fromEnv === fromOption) continue;
+        found.push(
+            `the ${option} option (${fromOption}) is ignored: ${envName}=${fromEnv} in the environment ` +
+                `overrides it. Remove one of them so they cannot disagree.`,
+        );
+    }
+    return found;
 }
 
 /** Resolve the configuration from the userConfig options and the host's environment. */

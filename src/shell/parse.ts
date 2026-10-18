@@ -96,6 +96,7 @@ import {
     settings,
     type Trap,
     targetName,
+    UNRESOLVED,
     UNSET,
     type Variables,
     variableKeys,
@@ -846,13 +847,50 @@ async function expandAndEmit(
                     stage,
                     cwd: ctx.cwd,
                     cwdOptions: ctx.cwdOptions,
+                    literals: literalTexts([], redirects),
                 }),
             );
         }
         return;
     }
     const argv = words.map((w) => w.text);
-    await emit(argv, redirects, ctx, via, depth, indirect, pipeline, stage, head.dynamic, [], environment);
+    await emit(
+        argv,
+        redirects,
+        ctx,
+        via,
+        depth,
+        indirect,
+        pipeline,
+        stage,
+        head.dynamic,
+        [],
+        environment,
+        literalTexts(words, redirects),
+    );
+}
+
+/**
+ * Texts of `words` and redirect targets holding a `$` or backtick that no
+ * expansion produced (`'a$b'`). A text an expansion also produced on this
+ * command, as a whole or as a directory (`'$X' $X`, `'$X' $X/y` with X
+ * unset), is left out: paths under it may still be computed.
+ */
+function literalTexts(words: readonly Word[], redirects: readonly Redirect[]): ReadonlySet<string> {
+    const items: Array<readonly [string, boolean]> = [
+        ...words.map((w) => [w.text, w.dynamic] as const),
+        ...redirects.map((r) => [r.target, r.dynamic] as const),
+    ];
+    const computed = items.filter(([, dynamic]) => dynamic).map(([text]) => text);
+    const shadowed = (text: string): boolean => {
+        const directory = `${text.replace(/\/+$/, "")}/`;
+        return computed.some((other) => other === text || other.startsWith(directory));
+    };
+    return new Set(
+        items
+            .filter(([text, dynamic]) => !dynamic && UNRESOLVED.test(text) && !shadowed(text))
+            .map(([text]) => text),
+    );
 }
 
 /** What the stage before this one prints, when it echoes known text. */
@@ -979,6 +1017,7 @@ function computedHere(head: string, ctx: Context): boolean {
  *
  * `environment` holds the command's prefix assignments (`X=1 cmd`): visible
  * to what cmd runs (`X=1 sh -c 'echo $X'`), gone once cmd returns.
+ * `literals` is SimpleCommand.literals for the words of `argv`.
  */
 export async function emit(
     argv: readonly string[],
@@ -992,6 +1031,7 @@ export async function emit(
     dynamicHead: boolean,
     wrappers: readonly string[],
     environment: readonly string[] = [],
+    literals: ReadonlySet<string> = new Set(),
 ): Promise<void> {
     // The caller's variables, once the command has an environment of its own.
     const caller: Variables[] = [];
@@ -1011,6 +1051,7 @@ export async function emit(
             dynamicHead,
             wrappers,
             caller,
+            literals,
         );
     } finally {
         const outer = caller[0];
@@ -1033,6 +1074,7 @@ async function unwrapAndRecord(
     initialDynamicHead: boolean,
     initialWrappers: readonly string[],
     caller: Variables[],
+    literals: ReadonlySet<string>,
 ): Promise<void> {
     let argv = [...initialArgv];
     let dynamicHead = initialDynamicHead;
@@ -1113,6 +1155,7 @@ async function unwrapAndRecord(
         cwd: ctx.cwd,
         cwdOptions: ctx.cwdOptions,
         environment: [...ctx.variables.entries()],
+        literals,
     });
     ctx.result.commands.push(command);
     if ((command.name === "return" || command.name === "exit") && !command.dynamicHead) {

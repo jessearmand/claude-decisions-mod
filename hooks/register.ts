@@ -14,7 +14,7 @@
 
 import type { EngineInterface, PluginOptions, Register, ToolCallEnvelope } from "claude-code";
 import { type Chain, decide } from "../src/chain.ts";
-import { type Config, resolveConfig } from "../src/config.ts";
+import { type Config, overriddenOptions, resolveConfig } from "../src/config.ts";
 import type { HookInput } from "../src/decision.ts";
 import { bashCommandValidator } from "../src/guards/bash-command-validator.ts";
 import { configGuard } from "../src/guards/config-guard.ts";
@@ -100,10 +100,14 @@ function ready($: EngineInterface): Promise<Runtime> {
     return runtime;
 }
 
-/** Snapshot the environment and settings before the first tool call. */
+/**
+ * Snapshot the environment and settings before the first tool call, and say
+ * which options an environment variable overrides.
+ */
 async function warm($: EngineInterface): Promise<void> {
     try {
-        await ready($);
+        const { host } = await ready($);
+        for (const warning of overriddenOptions(host, pluginOptions)) $.ui.log(`${PLUGIN}: ${warning}`);
     } catch (error) {
         $.ui.log(`${PLUGIN}: setup failed: ${String(error)}`, { to: "debug" });
     }

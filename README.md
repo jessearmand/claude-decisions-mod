@@ -87,7 +87,10 @@ Any gateway decision model works in place of Jev, for example
 Options are set in `/plugin configure decisions-guard@claude-decisions-mod`
 (or `claude plugin configure`) and stored in `settings.json` under
 `pluginConfigs`. The Python hooks' environment variables are honoured as
-overrides, so an existing `env` block keeps working.
+overrides, so an existing `env` block keeps working. When an environment
+variable replaces an option you set to a different value (for example
+`askThreshold` 0.75 under `BASH_RISK_JUDGE_ASK_THRESHOLD=0.6`), the mod
+says so when the session starts.
 
 | Option | Environment | Default | Meaning |
 |---|---|---|---|
@@ -121,6 +124,13 @@ bun run test        # vitest: the ported Python corpora and parity fixtures
 bun run test:mod    # claude plugin test: the hooks module against the engine
 bun run validate    # claude plugin validate
 ```
+
+CI (`.github/workflows/ci.yml`) runs every command above except `format`;
+`lint` already fails on unformatted code. The engine's types in
+`.claude-plugin/types/` are committed so CI can type-check the hooks module,
+and CI installs the Claude Code version named on their first line. Claude Code
+rewrites that file when it loads the mod after an update: commit the new
+version so CI moves to it.
 
 ### Parity with the Python hooks
 

@@ -340,11 +340,34 @@ const SED_SCRIPT_OPTIONS: ReadonlySet<string> = new Set([
     "--line-length",
 ]);
 
-function sedInPlace(args: readonly string[]): PathWrite[] {
-    const inPlace = args.some(
+/** A short option cluster ending in `-i`: BSD sed takes the next word as its backup suffix. */
+const BSD_IN_PLACE = /^-[a-zA-Z]*i$/;
+
+/**
+ * `args` without BSD sed's empty backup suffix: on macOS `sed -i '' s/a/b/ f`
+ * takes `''` as the suffix, where GNU sed takes it as the script. Only an
+ * empty word is dropped, since GNU sed (gsed, or a GNU `sed` first on PATH)
+ * runs it as an empty script that leaves each file's text as it was. A
+ * non-empty word stays, read the GNU way: that reading names every file the
+ * BSD one does, and one more.
+ */
+function withoutBackupSuffix(
+    name: string,
+    args: readonly string[],
+    platform: Host["platform"],
+): readonly string[] {
+    if (name !== "sed" || platform !== "darwin") return args;
+    const index = args.findIndex((a) => BSD_IN_PLACE.test(a));
+    if (index < 0 || args[index + 1] !== "") return args;
+    return [...args.slice(0, index + 1), ...args.slice(index + 2)];
+}
+
+function sedInPlace(name: string, allArgs: readonly string[], platform: Host["platform"]): PathWrite[] {
+    const inPlace = allArgs.some(
         (a) => a.startsWith("-i") || a.startsWith("--in-place") || /^-[a-zA-Z]*i[a-zA-Z]*$/.test(a),
     );
     if (!inPlace) return [];
+    const args = withoutBackupSuffix(name, allArgs, platform);
     const words = operands(args, SED_SCRIPT_OPTIONS);
     const hasScriptOption = args.some(
         (a) => ["-e", "--expression", "-f", "--file"].includes(a) || a.startsWith("--expression="),
@@ -565,7 +588,7 @@ export async function writtenPaths(
             found.push(...sources.map((path) => pathWrite(path, MOVE)));
         }
     } else if (name === "sed" || name === "gsed" || name === "perl") {
-        found.push(...(name !== "perl" ? sedInPlace(args) : perlInPlace(args)));
+        found.push(...(name !== "perl" ? sedInPlace(name, args, host.platform) : perlInPlace(args)));
     } else if (name === "dd") {
         found.push(...dd(args));
     } else if (name === "curl" || name === "wget") {

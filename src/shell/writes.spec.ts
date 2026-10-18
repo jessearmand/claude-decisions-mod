@@ -247,6 +247,19 @@ describe("writtenPaths", () => {
         );
         expect((await intoDir(["mv", "a", "b", "dir/"]))?.contents?.recursive).toBe(true);
     });
+    it("reads BSD sed's empty `-i ''` suffix on darwin only", async () => {
+        const darwin = memoryHost({ platform: "darwin" });
+        const paths = async (argv: string[], target: typeof host) =>
+            (await writtenPaths(new SimpleCommand({ argv }), undefined, target)).map((w) => w.path);
+        expect(await paths(["sed", "-i", "", "/x$/d", "f"], darwin)).toEqual(["f"]);
+        expect(await paths(["sed", "-Ei", "", "s/a/b/", "f", "g"], darwin)).toEqual(["f", "g"]);
+        expect(await paths(["sed", "-i", "", "-e", "s/a/b/", "f"], darwin)).toEqual(["f"]);
+        // GNU sed: `''` is the script, every later word a file.
+        expect(await paths(["sed", "-i", "", "/x$/d", "f"], host)).toEqual(["/x$/d", "f"]);
+        expect(await paths(["gsed", "-i", "", "/x$/d", "f"], darwin)).toEqual(["/x$/d", "f"]);
+        // A non-empty word after `-i` keeps the GNU reading, which names more files.
+        expect(await paths(["sed", "-i", "s/a/b/", "f"], darwin)).toEqual(["f"]);
+    });
     it("reads BSD cp's `src/` as its contents on darwin only", async () => {
         const darwin = memoryHost({ platform: "darwin" });
         const command = new SimpleCommand({ argv: ["cp", "-r", "src/", "dst"] });
