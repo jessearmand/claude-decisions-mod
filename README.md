@@ -50,7 +50,7 @@ nothing deterministic decided, and it can only ask.
 
 | Guard | Tools | What it does |
 |---|---|---|
-| `rm-rf-guard` | Bash | Asks before any `rm` that is both recursive and forced, with a per-target analysis and the least destructive alternative. |
+| `rm-rf-guard` | Bash | Asks before any `rm` that is both recursive and forced, with a per-target analysis and the least destructive alternative. Removals entirely inside a `scratchpad` directory of the project (symlinks followed) do not ask: the agent manages those. |
 | `dangerous-commands` | Bash | Denies (or asks about) destructive git, downloads piped into a shell, disk writes, `chmod -R 777`, crontab, package publishing, cloud/Kubernetes/database deletes and switching off security controls. Local removals (`git clean -f`, `find -delete`, `shred`) ask. |
 | `secrets-guard` | Bash, Read, Edit, Write, Grep, Glob | Blocks reading, mutating or exfiltrating credential files (`.env`, keys, cloud and coding-agent tokens), in three tiers. |
 | `config-guard` | Bash, Edit, Write | Stops the agent changing its own settings, hooks, MCP servers, other harnesses' config, home-directory skills and instructions, and persistence locations (shell rc files, git hooks and config, launchd, systemd, cron). |
