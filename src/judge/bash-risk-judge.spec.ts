@@ -19,6 +19,7 @@ import {
     CONCERNS,
     DEFAULT_ASK_THRESHOLD,
     escalationReason,
+    fallbackNotice,
     HOOK_NAME,
     isCandidate,
     OFF_TASK,
@@ -378,6 +379,38 @@ describe("bashRiskJudge.run: fallbacks", () => {
         const { run, records } = harness({ env: { HOOK_JEV_ENABLE: "0" } });
         await run("git clean -xdf");
         expect(records()).toEqual([]);
+    });
+
+    it("tells the user why a genuine fallback left the command unrated", async () => {
+        const notices: string[] = [];
+        const notFound = '{"error":{"message":"Model \'typesafe-ai/jev-1.14\' not found"}}';
+        const { deps } = harness({
+            env: { HOOK_JEV_MODEL: "typesafe-ai/jev-1.14" },
+            reply: () => ({ status: 404, ok: false, text: notFound }),
+        });
+        const notifying = { ...deps, notify: (message: string) => notices.push(message) };
+        await bashRiskJudge.run(
+            { toolName: "Bash", toolInput: { command: "git clean -xdf" }, cwd: WORK },
+            notifying,
+        );
+        expect(notices).toEqual([
+            fallbackNotice("typesafe-ai/jev-1.14", `gateway answered 404: ${notFound}`),
+        ]);
+        expect(notices[0]).toContain("typesafe-ai/jev-1.14");
+        expect(notices[0]).toContain("not risk-rated");
+    });
+
+    it("says nothing when the judge is off or answers", async () => {
+        for (const options of [{ env: { HOOK_JEV_ENABLE: "0" } }, { reply: SAFE }]) {
+            const notices: string[] = [];
+            const { deps } = harness(options);
+            const notifying = { ...deps, notify: (message: string) => notices.push(message) };
+            await bashRiskJudge.run(
+                { toolName: "Bash", toolInput: { command: "git clean -xdf" }, cwd: WORK },
+                notifying,
+            );
+            expect(notices).toEqual([]);
+        }
     });
 });
 
