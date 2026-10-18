@@ -125,6 +125,13 @@ bun run test:mod    # claude plugin test: the hooks module against the engine
 bun run validate    # claude plugin validate
 ```
 
+CI (`.github/workflows/ci.yml`) runs every command above except `format`;
+`lint` already fails on unformatted code. The engine's types in
+`.claude-plugin/types/` are committed so CI can type-check the hooks module,
+and CI installs the Claude Code version named on their first line. Claude Code
+rewrites that file when it loads the mod after an update: commit the new
+version so CI moves to it.
+
 ### Parity with the Python hooks
 
 The port is checked against the Python hooks three ways:
