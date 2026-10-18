@@ -60,7 +60,7 @@ import { globPaths } from "../shell/glob.ts";
 import { landingPaths } from "../shell/landing-paths.ts";
 import type { ParseResult, SimpleCommand, SourceResolver } from "../shell/model.ts";
 import { parse } from "../shell/parse.ts";
-import { isUnknown, reason as unknownReason } from "../shell/unknown-target.ts";
+import { isLiteral, isUnknown, reason as unknownReason } from "../shell/unknown-target.ts";
 import {
     DELETE_TREE,
     INTO_DIR,
@@ -525,7 +525,11 @@ export async function checkCommand(
                 if (!(found.indirect || found.uncertain)) return found;
                 softer = softer ?? found;
             }
-            if (softer === undefined && isUnknown(inherited(write.path, host), host.home)) {
+            if (
+                softer === undefined &&
+                !isLiteral(write.path, simple.literals) &&
+                isUnknown(inherited(write.path, host), host.home)
+            ) {
                 // `cp x "$OUT"`: where it lands is not known, so what the command does decides.
                 const why = unknownReason(simple, write, parsed);
                 if (why)

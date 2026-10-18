@@ -55,6 +55,20 @@ const CONTENT_SOURCES: ReadonlySet<string> = new Set([
 const REDIRECTS: ReadonlySet<string> = new Set([">", ">>", ">|", "&>", "&>>", "<>"]);
 
 /**
+ * Whether every `$` or backtick in `path` is literal text: the path is one of
+ * the command's `literals` (`sed -i '/x$/d' f` misread as a file), or such a
+ * directory with a plain name added (`cp a '$D'` also writes `$D/a`).
+ */
+export function isLiteral(path: string, literals: ReadonlySet<string>): boolean {
+    for (const literal of literals) {
+        if (path === literal) return true;
+        const directory = `${literal.replace(/\/+$/, "")}/`;
+        if (path.startsWith(directory) && !UNRESOLVED.test(path.slice(directory.length))) return true;
+    }
+    return false;
+}
+
+/**
  * Where `path` lands cannot be told apart from an agent's configuration:
  * nothing before its first computed part is known (`$OUT`, `$DIR/x.json`),
  * or only the root, the home or the current directory is (`~/$X`, `./$X`),

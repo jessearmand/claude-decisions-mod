@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ParseResult, redirect, SimpleCommand } from "./model.ts";
-import { isUnknown, reason } from "./unknown-target.ts";
+import { isLiteral, isUnknown, reason } from "./unknown-target.ts";
 import { DELETE_TREE, INTO_DIR, MOVE, PERMISSIONS, pathWrite, WRITE } from "./writes.ts";
 
 const HOME = "/home/user";
@@ -20,6 +20,21 @@ describe("isUnknown", () => {
         ["out.json", false],
     ])("isUnknown(%j) is %s", (path, expected) => {
         expect(isUnknown(path, HOME)).toBe(expected);
+    });
+});
+
+describe("isLiteral", () => {
+    const literals = new Set(["/x$/d", "$D/"]);
+    it.each([
+        ["/x$/d", true],
+        ["$D/a.json", true],
+        ["$D/sub/a.json", true],
+        ["$D", false],
+        ["$D/$X", false],
+        ["$OUT", false],
+        ["/x$/d2", false],
+    ])("isLiteral(%j) is %s", (path, expected) => {
+        expect(isLiteral(path, literals)).toBe(expected);
     });
 });
 
