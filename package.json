@@ -1,0 +1,25 @@
+{
+    "name": "claude-decisions-mod",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Claude Code mod: deterministic Bash and file guards plus a Jev decision-model risk judge",
+    "type": "module",
+    "scripts": {
+        "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
+        "lint": "oxlint --deny-warnings && oxfmt --check",
+        "lint:fix": "oxlint --fix && oxfmt",
+        "format": "oxfmt",
+        "test": "vitest run",
+        "test:mod": "claude plugin test .",
+        "validate": "claude plugin validate .",
+        "check": "bun run typecheck && bun run lint && bun run test"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "oxfmt": "^0.72.0",
+        "oxlint": "^1.87.0",
+        "typescript": "6.0.2",
+        "vitest": "^5.0.5"
+    },
+    "packageManager": "bun@1.4.3"
+}

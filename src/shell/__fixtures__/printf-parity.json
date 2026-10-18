@@ -1,0 +1,608 @@
+[
+    {
+        "name": "echo",
+        "args": [],
+        "xpgEcho": false,
+        "printed": "\n"
+    },
+    {
+        "name": "echo",
+        "args": ["hi"],
+        "xpgEcho": false,
+        "printed": "hi\n"
+    },
+    {
+        "name": "echo",
+        "args": ["a", "b"],
+        "xpgEcho": false,
+        "printed": "a b\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-n", "r"],
+        "xpgEcho": false,
+        "printed": "r"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\162\\155"],
+        "xpgEcho": false,
+        "printed": "\\162\\155\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\0162\\0155"],
+        "xpgEcho": false,
+        "printed": "rm\n"
+    },
+    {
+        "name": "echo",
+        "args": ["\\0162"],
+        "xpgEcho": true,
+        "printed": "r\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-E", "\\0162"],
+        "xpgEcho": true,
+        "printed": "\\0162\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-ne", "a\\tb"],
+        "xpgEcho": false,
+        "printed": "a\tb"
+    },
+    {
+        "name": "echo",
+        "args": ["-en", "a\\nb"],
+        "xpgEcho": false,
+        "printed": "a\nb"
+    },
+    {
+        "name": "echo",
+        "args": ["-nE", "x"],
+        "xpgEcho": false,
+        "printed": "x"
+    },
+    {
+        "name": "echo",
+        "args": ["-eE", "\\n"],
+        "xpgEcho": false,
+        "printed": "\n\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-Ee", "\\n"],
+        "xpgEcho": false,
+        "printed": "\n\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "a\\cb"],
+        "xpgEcho": false,
+        "printed": "a"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\c"],
+        "xpgEcho": false,
+        "printed": ""
+    },
+    {
+        "name": "echo",
+        "args": ["-x", "a"],
+        "xpgEcho": false,
+        "printed": "-x a\n"
+    },
+    {
+        "name": "echo",
+        "args": ["--", "a"],
+        "xpgEcho": false,
+        "printed": "-- a\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-", "a"],
+        "xpgEcho": false,
+        "printed": "- a\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-n"],
+        "xpgEcho": false,
+        "printed": ""
+    },
+    {
+        "name": "echo",
+        "args": ["-n", "-e", "\\x41"],
+        "xpgEcho": false,
+        "printed": "A"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\x41\\x4a\\x4"],
+        "xpgEcho": false,
+        "printed": "AJ\u0004\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\xzz"],
+        "xpgEcho": false,
+        "printed": "\\xzz\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\q"],
+        "xpgEcho": false,
+        "printed": "\\q\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\\\"],
+        "xpgEcho": false,
+        "printed": "\\\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\e[0m"],
+        "xpgEcho": false,
+        "printed": "\u001b[0m\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\a\\b\\f\\v\\r"],
+        "xpgEcho": false,
+        "printed": "\u0007\b\f\u000b\r\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\0"],
+        "xpgEcho": false,
+        "printed": "\u0000\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\00"],
+        "xpgEcho": false,
+        "printed": "\u0000\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\0777"],
+        "xpgEcho": false,
+        "printed": "ÿ\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\08"],
+        "xpgEcho": false,
+        "printed": "\u00008\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\400"],
+        "xpgEcho": false,
+        "printed": "\\400\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "trailing\\"],
+        "xpgEcho": false,
+        "printed": "trailing\\\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-e", "\\'\\\""],
+        "xpgEcho": false,
+        "printed": "'\"\n"
+    },
+    {
+        "name": "echo",
+        "args": ["-neeen", "x"],
+        "xpgEcho": false,
+        "printed": "x"
+    },
+    {
+        "name": "echo",
+        "args": ["-nee-", "x"],
+        "xpgEcho": false,
+        "printed": "-nee- x\n"
+    },
+    {
+        "name": "printf",
+        "args": [],
+        "xpgEcho": false,
+        "printed": ""
+    },
+    {
+        "name": "printf",
+        "args": ["hi"],
+        "xpgEcho": false,
+        "printed": "hi"
+    },
+    {
+        "name": "printf",
+        "args": ["%s", "rm"],
+        "xpgEcho": false,
+        "printed": "rm"
+    },
+    {
+        "name": "printf",
+        "args": ["%s\\n", "a", "b"],
+        "xpgEcho": false,
+        "printed": "a\nb\n"
+    },
+    {
+        "name": "printf",
+        "args": ["\\162\\155"],
+        "xpgEcho": false,
+        "printed": "rm"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\x72m"],
+        "xpgEcho": false,
+        "printed": "rm"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\0162"],
+        "xpgEcho": false,
+        "printed": "r"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\162"],
+        "xpgEcho": false,
+        "printed": "r"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "a\\cb"],
+        "xpgEcho": false,
+        "printed": "a"
+    },
+    {
+        "name": "printf",
+        "args": ["%b\\n", "a\\c", "b"],
+        "xpgEcho": false,
+        "printed": "a"
+    },
+    {
+        "name": "printf",
+        "args": ["%s %s\\n", "a"],
+        "xpgEcho": false,
+        "printed": "a \n"
+    },
+    {
+        "name": "printf",
+        "args": ["%s %s\\n", "a", "b", "c"],
+        "xpgEcho": false,
+        "printed": "a b\nc \n"
+    },
+    {
+        "name": "printf",
+        "args": ["%d", "5"],
+        "xpgEcho": false,
+        "printed": "5"
+    },
+    {
+        "name": "printf",
+        "args": ["%5.2f", "1"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "a b"],
+        "xpgEcho": false,
+        "printed": "a\\ b"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "~x#y"],
+        "xpgEcho": false,
+        "printed": "\\~x#y"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "#"],
+        "xpgEcho": false,
+        "printed": "\\#"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", ""],
+        "xpgEcho": false,
+        "printed": "''"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "a\tb"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "a\u0001b"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "it's"],
+        "xpgEcho": false,
+        "printed": "it\\'s"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "$HOME/`x`"],
+        "xpgEcho": false,
+        "printed": "\\$HOME/\\`x\\`"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "aé"],
+        "xpgEcho": false,
+        "printed": "aé"
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "a b"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%q", "a b"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%%"],
+        "xpgEcho": false,
+        "printed": "%"
+    },
+    {
+        "name": "printf",
+        "args": ["%%s", "x"],
+        "xpgEcho": false,
+        "printed": "%s"
+    },
+    {
+        "name": "printf",
+        "args": ["100%%\\n"],
+        "xpgEcho": false,
+        "printed": "100%\n"
+    },
+    {
+        "name": "printf",
+        "args": ["%"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%z", "x"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "printf",
+        "args": ["%-5s|", "a"],
+        "xpgEcho": false,
+        "printed": "a|"
+    },
+    {
+        "name": "printf",
+        "args": ["%05d", "7"],
+        "xpgEcho": false,
+        "printed": "7"
+    },
+    {
+        "name": "printf",
+        "args": ["%.3s", "abcdef"],
+        "xpgEcho": false,
+        "printed": "abcdef"
+    },
+    {
+        "name": "printf",
+        "args": ["%x %X %o %u %i %c", "1", "2", "3", "4", "5", "6"],
+        "xpgEcho": false,
+        "printed": "1 2 3 4 5 6"
+    },
+    {
+        "name": "printf",
+        "args": ["\\n\\t\\\\\\a\\e\\E\\f\\v\\r\\\"\\'"],
+        "xpgEcho": false,
+        "printed": "\n\t\\\u0007\u001b\u001b\f\u000b\r\"'"
+    },
+    {
+        "name": "printf",
+        "args": ["\\x41\\x4"],
+        "xpgEcho": false,
+        "printed": "A\u0004"
+    },
+    {
+        "name": "printf",
+        "args": ["\\0"],
+        "xpgEcho": false,
+        "printed": "\u0000"
+    },
+    {
+        "name": "printf",
+        "args": ["\\0101"],
+        "xpgEcho": false,
+        "printed": "\b1"
+    },
+    {
+        "name": "printf",
+        "args": ["\\101"],
+        "xpgEcho": false,
+        "printed": "A"
+    },
+    {
+        "name": "printf",
+        "args": ["\\777"],
+        "xpgEcho": false,
+        "printed": "ÿ"
+    },
+    {
+        "name": "printf",
+        "args": ["\\8"],
+        "xpgEcho": false,
+        "printed": "\\8"
+    },
+    {
+        "name": "printf",
+        "args": ["\\q"],
+        "xpgEcho": false,
+        "printed": "\\q"
+    },
+    {
+        "name": "printf",
+        "args": ["x\\"],
+        "xpgEcho": false,
+        "printed": "x\\"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\0"],
+        "xpgEcho": false,
+        "printed": "\u0000"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\08"],
+        "xpgEcho": false,
+        "printed": "\u00008"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\0101"],
+        "xpgEcho": false,
+        "printed": "A"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\101"],
+        "xpgEcho": false,
+        "printed": "A"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\\\"],
+        "xpgEcho": false,
+        "printed": "\\"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "a\\nb"],
+        "xpgEcho": false,
+        "printed": "a\nb"
+    },
+    {
+        "name": "printf",
+        "args": ["%s", "a\\nb"],
+        "xpgEcho": false,
+        "printed": "a\\nb"
+    },
+    {
+        "name": "printf",
+        "args": ["%s%s", "a"],
+        "xpgEcho": false,
+        "printed": "a"
+    },
+    {
+        "name": "printf",
+        "args": ["%s\\n"],
+        "xpgEcho": false,
+        "printed": "\n"
+    },
+    {
+        "name": "printf",
+        "args": ["rm -rf victim\\n"],
+        "xpgEcho": false,
+        "printed": "rm -rf victim\n"
+    },
+    {
+        "name": "printf",
+        "args": ["%s\\n", "-rf victim"],
+        "xpgEcho": false,
+        "printed": "-rf victim\n"
+    },
+    {
+        "name": "printf",
+        "args": ["%s %s", "echo", "rm"],
+        "xpgEcho": false,
+        "printed": "echo rm"
+    },
+    {
+        "name": "printf",
+        "args": ["%s", ""],
+        "xpgEcho": false,
+        "printed": ""
+    },
+    {
+        "name": "printf",
+        "args": ["%c", "abc"],
+        "xpgEcho": false,
+        "printed": "abc"
+    },
+    {
+        "name": "cat",
+        "args": ["x"],
+        "xpgEcho": false,
+        "printed": null
+    },
+    {
+        "name": "echo",
+        "args": ["x"],
+        "xpgEcho": true,
+        "printed": "x\n"
+    },
+    {
+        "name": "printf",
+        "args": ["%b", "\\c"],
+        "xpgEcho": false,
+        "printed": ""
+    },
+    {
+        "name": "printf",
+        "args": ["a%sb%sc", "1"],
+        "xpgEcho": false,
+        "printed": "a1bc"
+    },
+    {
+        "name": "printf",
+        "args": ["%s", "x", "y"],
+        "xpgEcho": false,
+        "printed": "xy"
+    },
+    {
+        "name": "printf",
+        "args": ["-", "x"],
+        "xpgEcho": false,
+        "printed": "-"
+    },
+    {
+        "name": "printf",
+        "args": ["--", "x"],
+        "xpgEcho": false,
+        "printed": "--"
+    },
+    {
+        "name": "printf",
+        "args": ["-v", "x"],
+        "xpgEcho": false,
+        "printed": "-v"
+    },
+    {
+        "name": "printf",
+        "args": ["%s\\c%s", "a", "b"],
+        "xpgEcho": false,
+        "printed": "a\\cb"
+    }
+]
