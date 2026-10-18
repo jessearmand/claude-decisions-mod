@@ -1,6 +1,6 @@
 {
     "name": "decisions-guard",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Deterministic Bash and file guards (rm -rf, dangerous commands, secrets, agent config, generated files) plus a Jev decision-model risk judge on Vercel AI Gateway",
     "author": { "name": "Jesse Armand" },
     "repository": "https://github.com/jessearmand/claude-decisions-mod",
