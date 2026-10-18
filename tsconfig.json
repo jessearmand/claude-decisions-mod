@@ -15,5 +15,6 @@
         "jsxFragmentFactory": "Fragment"
     },
     "include": [".claude-plugin/types", "hooks", "src", "types"],
+    "files": ["src/host/engine-host.spec.ts"],
     "exclude": ["src/host/node-host.ts", "**/*.spec.ts", "scripts", "node_modules"]
 }

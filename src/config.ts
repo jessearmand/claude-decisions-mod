@@ -70,7 +70,10 @@ export interface Config {
         readonly logDirEnv: readonly string[];
     };
     readonly judge: JudgeConfig;
-    /** HOOK_ASK_CRITICAL / HOOK_ASK_HIGH / HOOK_ASK_STRICT: prompt for that tier instead of denying. */
+    /**
+     * HOOK_ASK_CRITICAL / HOOK_ASK_HIGH / HOOK_ASK_STRICT: prompt for that tier instead of
+     * denying; every tier when the askInsteadOfDeny option is on.
+     */
     readonly askForLevel: Readonly<Record<Level, boolean>>;
     /** HOOK_UNATTENDED_KEEP_ASK or the option: leave asks alone under bypassPermissions/dontAsk. */
     readonly unattendedKeepAsk: boolean;
@@ -172,9 +175,9 @@ export function resolveConfig(host: Host, options: RawOptions = {}): Config {
             logDirEnv: ["BASH_RISK_JUDGE_LOG_DIR"],
         },
         askForLevel: {
-            critical: envFlag(env("HOOK_ASK_CRITICAL")),
-            high: envFlag(env("HOOK_ASK_HIGH")),
-            strict: envFlag(env("HOOK_ASK_STRICT")),
+            critical: askAll || envFlag(env("HOOK_ASK_CRITICAL")),
+            high: askAll || envFlag(env("HOOK_ASK_HIGH")),
+            strict: askAll || envFlag(env("HOOK_ASK_STRICT")),
         },
         unattendedKeepAsk:
             envFlag(env("HOOK_UNATTENDED_KEEP_ASK")) || booleanOption(options, "unattendedKeepAsk"),

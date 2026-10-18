@@ -11,7 +11,7 @@
  */
 
 import type { EngineInterface } from "claude-code";
-import { dirname } from "../util/paths.ts";
+import { dirname, join } from "../util/paths.ts";
 import type { DirEntry, FileStat, Host, HttpReply, HttpRequest, RunOptions, RunResult } from "./host.ts";
 
 async function snapshotEnvironment($: EngineInterface): Promise<Map<string, string>> {
@@ -140,16 +140,25 @@ async function readTextOf($: EngineInterface, path: string, maxBytes: number): P
     }
 }
 
+/**
+ * `Host.list` reports what each entry leads to; the engine's listing reports a
+ * symbolic link as `other`, so each link is looked up with `$.fs.stat`, which
+ * follows it (a dangling link stays `other`). Without this a glob would never
+ * descend through a linked directory to reach a settings file.
+ */
 async function listDirectory($: EngineInterface, path: string): Promise<readonly DirEntry[] | undefined> {
     try {
         const entries = await $.fs.list(path);
-        return entries
-            .map((entry): DirEntry => ({
-                name: entry.name,
-                kind: entry.kind === "file" || entry.kind === "dir" ? entry.kind : "other",
-                isLink: entry.isLink,
-            }))
-            .sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+        const adapted = await Promise.all(
+            entries.map(async (entry): Promise<DirEntry> => {
+                const own = entry.kind === "file" || entry.kind === "dir" ? entry.kind : "other";
+                const kind = entry.isLink
+                    ? ((await statPath($, join(path, entry.name)))?.kind ?? "other")
+                    : own;
+                return { name: entry.name, kind, isLink: entry.isLink };
+            }),
+        );
+        return adapted.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
     } catch {
         return undefined;
     }
@@ -210,6 +219,25 @@ async function appendTextTo($: EngineInterface, path: string, text: string): Pro
     }
 }
 
+/** The last pending append per path; each new one starts once the one before it is done. */
+const pendingAppends = new Map<string, Promise<void>>();
+
+/**
+ * Appends one after another per path: two parallel tool calls would otherwise
+ * both read the day's log before either writes, and the later write would drop
+ * the earlier record. The whole read and write is queued, not only the write.
+ * The queue covers this module; another Claude Code process can still interleave.
+ */
+function appendInOrder($: EngineInterface, path: string, text: string): Promise<void> {
+    const previous = pendingAppends.get(path) ?? Promise.resolve();
+    const current = previous.then(() => appendTextTo($, path, text));
+    pendingAppends.set(path, current);
+    void current.then(() => {
+        if (pendingAppends.get(path) === current) pendingAppends.delete(path);
+    });
+    return current;
+}
+
 function debugLine($: EngineInterface, message: string): void {
     $.ui.log(message, { to: "debug" });
 }
@@ -229,7 +257,7 @@ export async function engineHost($: EngineInterface): Promise<Host> {
         list: (path) => listDirectory($, path),
         run: (argv, options) => runProcess($, argv, options),
         fetch: (url, request) => fetchUrl($, url, request),
-        appendText: (path, text) => appendTextTo($, path, text),
+        appendText: (path, text) => appendInOrder($, path, text),
         now: () => Date.now(),
         debug: (message) => debugLine($, message),
     };

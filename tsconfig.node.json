@@ -17,6 +17,7 @@
         "node_modules",
         "**/*.test.ts",
         "src/host/engine-host.ts",
+        "src/host/engine-host.spec.ts",
         "src/host/engine-transcript.ts"
     ]
 }

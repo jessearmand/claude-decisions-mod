@@ -6,6 +6,7 @@
  */
 
 import { describe, expect, it } from "vitest";
+import type { Host } from "../host/host.ts";
 import { memoryHost } from "../host/memory-host.ts";
 import { caseInsensitive, isInside, patternMatches } from "./filesystem-paths.ts";
 
@@ -56,6 +57,16 @@ describe("caseInsensitive", () => {
         const host = memoryHost({ platform: "darwin", dirs: ["/123"] });
         expect(await caseInsensitive("/123/.CLAUDE/settings.json", host)).toBe(true);
         expect(await caseInsensitive("/nowhere/.CLAUDE/settings.json", host)).toBe(true);
+    });
+    it("does not rely on realPath folding a case alias's spelling", async () => {
+        // The engine's `$.fs.stat(..., { resolve: true })` keeps a case alias as spelled,
+        // so the alias and the original resolve to different strings on the same volume.
+        const base = darwin("/private/work", true);
+        const host: Host = Object.assign(Object.create(base), {
+            realPath: async (path: string) => path,
+        });
+        expect(await caseInsensitive("/Users/me/.CLAUDE/SETTINGS.JSON", host)).toBe(true);
+        expect(await caseInsensitive("/private/work/.CLAUDE/settings.json", host)).toBe(true);
     });
 });
 

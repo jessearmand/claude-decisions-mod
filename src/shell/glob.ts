@@ -18,6 +18,7 @@
 
 import type { Host } from "../host/host.ts";
 import { join } from "../util/paths.ts";
+import { ANY, literal, STAR, type WildcardToken, wildcardMatch } from "./wildcard.ts";
 
 const CLASSES: ReadonlyMap<string, string> = new Map([
     ["alnum", "a-zA-Z0-9"],
@@ -60,31 +61,83 @@ export function withExtglob<T>(enabled: boolean, fn: () => T): T {
 
 /** Whether all of `text` matches the bash pattern `pattern`. `extglob` defaults to the `withExtglob` flag. */
 export function match(text: string, pattern: string, extglob?: boolean): boolean {
-    return compiled(pattern, extglob ?? extglobOn).test(text);
+    return compiled(pattern, extglob ?? extglobOn)(text);
 }
 
+type Matcher = (text: string) => boolean;
+
 const CACHE_SIZE = 512;
-const cache = new Map<string, RegExp>();
+const cache = new Map<string, Matcher>();
 
 /** `lru_cache(maxsize=512)` on the compiled pattern (cleared, not evicted, when full). */
-function compiled(pattern: string, extglob: boolean): RegExp {
+function compiled(pattern: string, extglob: boolean): Matcher {
     const key = `${extglob ? "1" : "0"}${pattern}`;
     const cached = cache.get(key);
     if (cached) return cached;
     if (cache.size >= CACHE_SIZE) cache.clear();
-    const regex = compile(pattern, extglob);
-    cache.set(key, regex);
-    return regex;
+    const matcher = compile(pattern, extglob);
+    cache.set(key, matcher);
+    return matcher;
 }
 
-function compile(pattern: string, extglob: boolean): RegExp {
+/**
+ * A pattern without extglob groups runs on the bounded wildcard matcher; a
+ * group can nest stars of its own, so that rarer case keeps the regular expression.
+ */
+function compile(pattern: string, extglob: boolean): Matcher {
     try {
-        return new RegExp(`^(?:${translate(pattern, extglob)})$`, "su");
+        const pieces = tokenize(pattern, extglob);
+        if (pieces !== undefined) return (text) => wildcardMatch(Array.from(text), pieces);
+        const regex = new RegExp(`^(?:${translate(pattern, extglob)})$`, "su");
+        return (text) => regex.test(text);
     } catch (error) {
         if (error instanceof Unsupported) throw error;
         // Python's re would raise re.error (`[z-a]`); here it is reported as unsupported.
         throw new Unsupported(pattern);
     }
+}
+
+/** The code point of `text` that starts at UTF-16 index `index`. */
+function codePointFrom(text: string, index: number): string {
+    return String.fromCodePoint(text.codePointAt(index) as number);
+}
+
+/** `pattern` as wildcard tokens, read as `translate` reads it; undefined when it holds an extglob group. */
+function tokenize(pattern: string, extglob: boolean): WildcardToken[] | undefined {
+    const out: WildcardToken[] = [];
+    let index = 0;
+    while (index < pattern.length) {
+        const char = pattern[index] as string;
+        if (extglob && "?*+@!".includes(char) && pattern.startsWith("(", index + 1)) {
+            if (groupEnd(pattern, index + 1) !== undefined) return undefined;
+        }
+        if (char === "\\" && index + 1 < pattern.length) {
+            const escaped = codePointFrom(pattern, index + 1);
+            out.push(literal(escaped));
+            index += 1 + escaped.length;
+        } else if (char === "*") {
+            out.push(STAR);
+            index += 1;
+        } else if (char === "?") {
+            out.push(ANY);
+            index += 1;
+        } else if (char === "[") {
+            const bracket = bracketExpression(pattern, index);
+            if (bracket === undefined) {
+                out.push(literal("[")); // no closing `]`: a literal bracket
+                index += 1;
+            } else {
+                const regex = new RegExp(`^${bracket[0]}$`, "su");
+                out.push({ star: false, test: (candidate) => regex.test(candidate) });
+                index = bracket[1];
+            }
+        } else {
+            const own = codePointFrom(pattern, index);
+            out.push(literal(own));
+            index += own.length;
+        }
+    }
+    return out;
 }
 
 // `?(a|b)` zero or one, `*( )` any number, `+( )` one or more, `@( )` exactly one.
@@ -277,49 +330,33 @@ function fnmatchBracket(
  * case-sensitive, a `*` matching anything (`/` and a leading `.` included).
  */
 export function fnmatch(name: string, pattern: string): boolean {
-    const text = Array.from(name);
-    const pat = Array.from(pattern);
-    return fnmatchFrom(text, 0, pat, 0);
+    return wildcardMatch(Array.from(name), fnmatchTokens(Array.from(pattern)));
 }
 
-function fnmatchFrom(
-    text: readonly string[],
-    textIndex: number,
-    pat: readonly string[],
-    patIndex: number,
-): boolean {
-    let t = textIndex;
-    let p = patIndex;
+/** A Python fnmatch pattern (code points) as wildcard tokens. */
+function fnmatchTokens(pat: readonly string[]): WildcardToken[] {
+    const out: WildcardToken[] = [];
+    let p = 0;
     while (p < pat.length) {
         const char = pat[p] as string;
         if (char === "*") {
-            while (pat[p] === "*") p += 1;
-            if (p === pat.length) return true;
-            for (let rest = t; rest <= text.length; rest += 1) {
-                if (fnmatchFrom(text, rest, pat, p)) return true;
-            }
-            return false;
-        }
-        if (t >= text.length) return false;
-        if (char === "?") {
-            t += 1;
+            out.push(STAR);
             p += 1;
-            continue;
-        }
-        if (char === "[") {
-            const bracket = fnmatchBracket(pat, p);
-            if (bracket !== undefined) {
-                if (!bracket.matches(text[t] as string)) return false;
-                t += 1;
+        } else if (char === "?") {
+            out.push(ANY);
+            p += 1;
+        } else {
+            const bracket = char === "[" ? fnmatchBracket(pat, p) : undefined;
+            if (bracket === undefined) {
+                out.push(literal(char));
+                p += 1;
+            } else {
+                out.push({ star: false, test: bracket.matches });
                 p = bracket.end;
-                continue;
             }
         }
-        if (char !== text[t]) return false;
-        t += 1;
-        p += 1;
     }
-    return t === text.length;
+    return out;
 }
 
 export interface GlobOptions {

@@ -177,6 +177,18 @@ describe("hook protocol", () => {
         expect(out?.reason).toContain("🔐 Confirm by secrets-guard [read-env]");
     });
 
+    it("the askInsteadOfDeny option -> ask for every tier", async () => {
+        const base = deps();
+        const options = { ...base, config: resolveConfig(base.host, { askInsteadOfDeny: true }) };
+        const read = await secretsGuard.run(input("Read", { file_path: "/home/user/.env" }), options);
+        expect(read?.decision).toBe("ask");
+        const bash = await secretsGuard.run(input("Bash", { command: "cat .env" }), options);
+        expect(bash?.decision).toBe("ask");
+        expect(
+            (await secretsGuard.run(input("Read", { file_path: "/home/user/.env" }), deps()))?.decision,
+        ).toBe("deny");
+    });
+
     it("SECRETS_GUARD_DISABLE=1 -> defer", async () => {
         expect(
             await secretsGuard.run(

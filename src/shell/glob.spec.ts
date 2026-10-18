@@ -85,6 +85,28 @@ describe("fnmatch (Python fnmatchcase)", () => {
     });
 });
 
+describe("matching time with many stars", () => {
+    // Backtracking on every `*` made `*a*a…b` against a run of `a` exponential.
+    const text = "a".repeat(64);
+    const rejected = `${"*a".repeat(24)}b`;
+    const accepted = `${"*a".repeat(24)}*`;
+
+    it("stays bounded in fnmatch", () => {
+        const start = performance.now();
+        expect(fnmatch(text, rejected)).toBe(false);
+        expect(fnmatch(text, accepted)).toBe(true);
+        expect(fnmatch("xaybz", "*a*b?")).toBe(true);
+        expect(performance.now() - start).toBeLessThan(250);
+    });
+    it("stays bounded in bash match", () => {
+        const start = performance.now();
+        expect(match(text, rejected)).toBe(false);
+        expect(match(text, accepted)).toBe(true);
+        expect(match("x[aybz", "*\\[*b?")).toBe(true);
+        expect(performance.now() - start).toBeLessThan(250);
+    });
+});
+
 describe("globPaths parity with glob.glob", () => {
     const host = memoryHost({
         files: Object.fromEntries(data.tree.files.map((path) => [`${data.tree.root}/${path}`, ""])),

@@ -3,7 +3,7 @@
  *
  * Ported from filesystem_paths.py. Python asked `pathconf(_PC_CASE_SENSITIVE)`
  * of the nearest existing ancestor; a `Host` has no pathconf, so the volume is
- * probed by resolving that ancestor under a case-swapped spelling instead (see
+ * probed by looking that ancestor up under a case-swapped spelling instead (see
  * `caseInsensitive`). `patternMatches` and `isInside` take the answer, computed
  * once per path by the caller, rather than probing per call.
  */
@@ -38,10 +38,13 @@ function swapCase(name: string): string | undefined {
  * An unavailable answer on macOS conservatively protects case aliases.
  * Linux paths retain their normal case-sensitive comparisons.
  *
- * Without pathconf, the ancestor is resolved again with the letters of its
- * last component case-swapped: when both spellings lead to the same real
- * path the volume folds case. An ancestor with no letter to swap (the root,
- * digits only) answers true, as Python's `except` branch did.
+ * Without pathconf, the ancestor is looked up again with the letters of its
+ * last component case-swapped: a case-folding volume always finds it. The
+ * two spellings are not compared by `realPath`, since the engine's answer
+ * keeps a case alias's own spelling. On a case-sensitive volume the swapped
+ * name exists only as a distinct sibling, which folds case for this path
+ * and so protects more, never less. An ancestor with no letter to swap (the
+ * root, digits only) answers true, as Python's `except` branch did.
  *
  * `cwd` anchors a relative `path` (Python used the process directory).
  */
@@ -59,7 +62,7 @@ export async function caseInsensitive(path: string, host: Host, cwd = "/"): Prom
     if (swapped === undefined) return true;
     const parent = dirname(real);
     const sibling = parent === "/" ? `/${swapped}` : `${parent}/${swapped}`;
-    return (await host.realPath(sibling)) === real;
+    return exists(await host.stat(sibling));
 }
 
 /** `pattern` without the `g` flag, so `.test` never carries a `lastIndex` between calls. */
