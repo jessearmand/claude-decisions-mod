@@ -242,6 +242,18 @@ export function escalationReason(evaluation: Evaluation, threshold: number): str
     );
 }
 
+/**
+ * What the user is told when the model could not answer: the judge defers,
+ * so without this a wrong model id or a missing key would leave every
+ * command unrated with only the audit log to say so.
+ */
+export function fallbackNotice(model: string, error: string): string {
+    return (
+        `${HOOK_NAME} could not get a decision from ${model} (${error}). Bash commands are not ` +
+        "risk-rated until this is fixed; the other guards and normal permission prompts still apply."
+    );
+}
+
 function log(host: Host, deps: GuardDeps, payload: Readonly<Record<string, unknown>>): Promise<void> {
     return logEvent(host, HOOK_NAME, payload, deps.config.judge.logDirEnv, { logDir: deps.config.logDir });
 }
@@ -292,6 +304,7 @@ async function run(input: HookInput, deps: GuardDeps): Promise<Decision | undefi
                 command: truncate(redact(command)),
                 error,
             });
+            deps.notify?.(fallbackNotice(config.judge.model, error));
         }
         return undefined;
     }

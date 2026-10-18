@@ -32,6 +32,12 @@ export interface GuardDeps {
     readonly sources: SourceResolver;
     /** The conversation so far, for the judge's context; absent in scripts and tests that need none. */
     readonly transcript?: TranscriptReader;
+    /**
+     * Shows the user a one-line notice in the session, for a problem a guard
+     * works around but the user should fix; the hooks module shows each
+     * distinct notice once. Absent in scripts and tests that need none.
+     */
+    readonly notify?: (message: string) => void;
 }
 
 export interface Guard {

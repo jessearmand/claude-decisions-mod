@@ -28,6 +28,7 @@ import { engineHost } from "../src/host/engine-host.ts";
 import { engineTranscriptReader } from "../src/host/engine-transcript.ts";
 import type { Host } from "../src/host/host.ts";
 import { bashRiskJudge } from "../src/judge/bash-risk-judge.ts";
+import { onceEach } from "../src/notices.ts";
 import { normpath } from "../src/util/paths.ts";
 
 const PLUGIN = "decisions-guard";
@@ -42,6 +43,13 @@ interface Runtime {
     readonly host: Host;
     readonly config: Config;
     readonly deps: GuardDeps;
+    /** Notices already shown since the module loaded, so a failure that repeats each call is shown once. */
+    readonly shown: Set<string>;
+}
+
+/** `deps` for one call, with notices going to this call's session. */
+function withNotices($: EngineInterface, { deps, shown }: Runtime): GuardDeps {
+    return { ...deps, notify: onceEach((message) => $.ui.log(`${PLUGIN}: ${message}`), shown) };
 }
 
 async function build($: EngineInterface, options: PluginOptions): Promise<Runtime> {
@@ -57,6 +65,7 @@ async function build($: EngineInterface, options: PluginOptions): Promise<Runtim
         host,
         config,
         deps: { host, config, sources: sourcesWithGitAliases, transcript: engineTranscriptReader($) },
+        shown: new Set(),
     };
 }
 
@@ -123,7 +132,7 @@ export const register: Register = (on, options) => {
     });
 
     on("classic.PreToolUse", async ($, e, next) => {
-        const { deps } = await ready($);
+        const deps = withNotices($, await ready($));
         const input = await hookInput($, e);
         const outcome = await decide(CHAIN, input, deps);
         for (const [guard, error] of outcome.errors)
