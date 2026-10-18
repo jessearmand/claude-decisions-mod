@@ -7,7 +7,7 @@
 import type { EngineInterface } from "claude-code";
 import { describe, expect, it } from "vitest";
 import { globPaths } from "../shell/glob.ts";
-import { engineHost } from "./engine-host.ts";
+import { engineHost, partPath } from "./engine-host.ts";
 
 interface FakeTree {
     readonly files: Map<string, string>;
@@ -112,5 +112,25 @@ describe("engineHost", () => {
             ["first", "second", "third"].map((line) => host.appendText("/logs/day.jsonl", `${line}\n`)),
         );
         expect(tree.files.get("/logs/day.jsonl")).toBe("seed\nfirst\nsecond\nthird\n");
+    });
+
+    it("goes on in a new part once a day's log is full, never erasing it", async () => {
+        const full = `${"x".repeat(3 * 1024 * 1024 - 4)}\n`;
+        const tree: FakeTree = {
+            files: new Map([["/logs/day.jsonl", full]]),
+            dirs: new Set(["/logs"]),
+            links: new Map(),
+        };
+        const host = await engineHost(fakeEngine(tree));
+        await host.appendText("/logs/day.jsonl", "next\n");
+        await host.appendText("/logs/day.jsonl", "after\n");
+        expect(tree.files.get("/logs/day.jsonl")).toBe(full);
+        expect(tree.files.get("/logs/day.1.jsonl")).toBe("next\nafter\n");
+    });
+
+    it("names the parts beside the day's file", () => {
+        expect(partPath("/logs/2026-10-18.jsonl", 0)).toBe("/logs/2026-10-18.jsonl");
+        expect(partPath("/logs/2026-10-18.jsonl", 2)).toBe("/logs/2026-10-18.2.jsonl");
+        expect(partPath("/logs.d/day", 1)).toBe("/logs.d/day.1");
     });
 });

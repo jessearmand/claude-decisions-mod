@@ -208,12 +208,40 @@ async function fetchUrl(
     }
 }
 
-/** The engine's fs has no append: read what is there (bounded) and write it back. */
+/** A part of a day's log stays under this, well inside the engine's 4 MiB read and write limit. */
+const PART_LIMIT_BYTES = 3 * 1024 * 1024;
+const MAX_PARTS = 1000;
+
+/** `day.jsonl`, then `day.1.jsonl`, `day.2.jsonl`, ...: where a day's log goes on once a part is full. */
+export function partPath(path: string, part: number): string {
+    if (part === 0) return path;
+    const dot = path.lastIndexOf(".");
+    return dot > path.lastIndexOf("/")
+        ? `${path.slice(0, dot)}.${part}${path.slice(dot)}`
+        : `${path}.${part}`;
+}
+
+/**
+ * The engine's fs has no append: read what is there and write it back. A part
+ * that the record would take past PART_LIMIT_BYTES is left as it is and the
+ * record goes to the next part, so a full log is never read short or rewritten.
+ */
 async function appendTextTo($: EngineInterface, path: string, text: string): Promise<void> {
+    const bytes = new TextEncoder().encode(text).length;
     try {
-        const stat = await statPath($, path);
-        const existing = stat !== undefined && stat.size <= 3 * 1024 * 1024 ? await $.fs.read(path) : "";
-        await $.fs.write(path, existing + text);
+        for (let part = 0; part < MAX_PARTS; part += 1) {
+            const target = partPath(path, part);
+            const stat = await statPath($, target);
+            if (stat === undefined) {
+                await $.fs.write(target, text);
+                return;
+            }
+            if (stat.size + bytes <= PART_LIMIT_BYTES) {
+                await $.fs.write(target, (await $.fs.read(target)) + text);
+                return;
+            }
+        }
+        $.ui.log(`decisions-guard: every part of ${path} is full`, { to: "debug" });
     } catch {
         $.ui.log(`decisions-guard: could not append to ${path}`, { to: "debug" });
     }
