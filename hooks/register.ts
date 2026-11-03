@@ -4,7 +4,7 @@
  * Every tool call passes through `classic.PreToolUse`, where the guard chain
  * answers `{ deny }`, `{ ask }` or hands the call on to the normal permission
  * flow, exactly as the Python settings hooks did through their stdout JSON.
- * The chain runs the deterministic guards first and the Jev judge only when
+ * The chain runs the deterministic guards first and the model judge only when
  * nothing deterministic decided (src/chain.ts).
  *
  * A guard that throws is caught by the chain and denies; should the module

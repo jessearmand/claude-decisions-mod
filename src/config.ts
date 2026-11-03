@@ -82,7 +82,7 @@ export interface Config {
 }
 
 export const DEFAULT_GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/evaluate";
-export const DEFAULT_JEV_MODEL = "typesafe-ai/jev";
+export const DEFAULT_JEV_MODEL = "perplexity/pplx-decider-v1.2";
 export const DEFAULT_JEV_TIMEOUT_SECONDS = 5;
 export const DEFAULT_ASK_THRESHOLD = 0.7;
 

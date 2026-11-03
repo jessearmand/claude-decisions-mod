@@ -4,7 +4,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { resolveConfig } from "../config.ts";
+import { DEFAULT_JEV_MODEL, resolveConfig } from "../config.ts";
 import type { HttpReply, HttpRequest, RunOptions, RunResult } from "../host/host.ts";
 import { memoryHost } from "../host/memory-host.ts";
 import {
@@ -132,7 +132,7 @@ describe("evaluate: the happy path", () => {
         });
         expect(call.request.timeoutMs).toBe(2000);
         const sent = body(call);
-        expect(sent.model).toBe("typesafe-ai/jev");
+        expect(sent.model).toBe(DEFAULT_JEV_MODEL);
         expect(sent.state).toBe("cwd: /p\ncommand:\ngit clean -xdf\n");
         expect(evaluation?.probability("destructive")).toBe(0.93);
         expect(evaluation?.probability("missing")).toBeUndefined();

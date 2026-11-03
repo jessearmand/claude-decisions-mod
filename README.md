@@ -3,8 +3,8 @@
 A [Claude Code mod](https://code.claude.com/docs/en/plugins/mods/overview) that
 decides, before a tool call runs, whether it may: deterministic guards for the
 Bash, Read, Edit, Write, Grep and Glob tools, and a model-assisted second
-opinion from a **decision model** ([Jev](https://vercel.com/kb/jev-from-typesafe-ai)
-by TypeSafe AI on [Vercel AI Gateway](https://vercel.com/docs/ai-gateway/modalities/decision))
+opinion from a **decision model** (Perplexity's `pplx-decider-v1.2` by default,
+on [Vercel AI Gateway](https://vercel.com/docs/ai-gateway/modalities/decision))
 for the long tail of risky commands no rule enumerates.
 
 It is the TypeScript port of the Python hooks in
@@ -69,7 +69,7 @@ Under `bypassPermissions` or `dontAsk`, where nobody can answer, a
 deterministic ask becomes a deny (set `unattendedKeepAsk` to keep asks).
 The mode is read from the merged settings' `permissions.defaultMode`.
 
-## The Jev risk judge
+## The model risk judge
 
 The judge is off until enabled. It sends the (redacted) command, the
 user's latest prompt, the agent's last few commands and the body of any
@@ -79,8 +79,14 @@ probabilities. Credentials are, in order: `AI_GATEWAY_API_KEY`,
 `VERCEL_OIDC_TOKEN`, the `jevApiKey` option, or `fnox` (pointed at
 `HOOK_JEV_FNOX_CONFIG`). Every failure (no key, timeout, bad JSON) defers.
 
-Any gateway decision model works in place of Jev, for example
-`openai/gpt-6-luna-decisions`.
+The default model is `perplexity/pplx-decider-v1.2`. On the probe corpus
+(`scripts/judge-probe.ts`, 111 labelled commands, 3 repeats) it prompted on
+97% of risky commands and on none of the benign look-alikes at the 0.7
+threshold, with identical answers across repeats; TypeSafe's
+[Jev](https://vercel.com/kb/jev-from-typesafe-ai) (`typesafe-ai/jev`, the
+previous default) prompted on 90% and 4%. Its 262,144-token window also fits
+far longer commands. Any gateway decision model works in its place, for
+example `typesafe-ai/jev` or `openai/gpt-6-luna-decisions`.
 
 ## Configuration
 
@@ -95,7 +101,7 @@ says so when the session starts.
 | Option | Environment | Default | Meaning |
 |---|---|---|---|
 | `jevEnable` | `HOOK_JEV_ENABLE` | off | Turn the judge on. |
-| `jevModel` | `HOOK_JEV_MODEL` | `typesafe-ai/jev` | Gateway decision model id. |
+| `jevModel` | `HOOK_JEV_MODEL` | `perplexity/pplx-decider-v1.2` | Gateway decision model id. |
 | `jevApiKey` | `AI_GATEWAY_API_KEY` / `VERCEL_OIDC_TOKEN` | | Gateway credential (stored in secure storage). |
 | `jevTimeoutSeconds` | `HOOK_JEV_TIMEOUT` | 5 | Deadline for the decision call. |
 | `askThreshold` | `BASH_RISK_JUDGE_ASK_THRESHOLD` | 0.7 | Probability at or above which the judge asks. |

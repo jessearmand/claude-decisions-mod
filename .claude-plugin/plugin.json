@@ -1,7 +1,7 @@
 {
     "name": "decisions-guard",
     "version": "0.1.1",
-    "description": "Deterministic Bash and file guards (rm -rf, dangerous commands, secrets, agent config, generated files) plus a Jev decision-model risk judge on Vercel AI Gateway",
+    "description": "Deterministic Bash and file guards (rm -rf, dangerous commands, secrets, agent config, generated files) plus a decision-model risk judge on Vercel AI Gateway",
     "author": { "name": "Jesse Armand" },
     "repository": "https://github.com/jessearmand/claude-decisions-mod",
     "license": "Apache-2.0",
@@ -9,15 +9,15 @@
     "userConfig": {
         "jevEnable": {
             "type": "boolean",
-            "title": "Enable the Jev risk judge",
+            "title": "Enable the model risk judge",
             "description": "Ask a decision model on Vercel AI Gateway about risky Bash commands the deterministic guards do not decide. Off by default; HOOK_JEV_ENABLE=1 in the environment also turns it on.",
             "default": false
         },
         "jevModel": {
             "type": "string",
             "title": "Decision model",
-            "description": "Gateway decision model id, e.g. typesafe-ai/jev or openai/gpt-6-luna-decisions (HOOK_JEV_MODEL overrides).",
-            "default": "typesafe-ai/jev"
+            "description": "Gateway decision model id, e.g. perplexity/pplx-decider-v1.2, typesafe-ai/jev or openai/gpt-6-luna-decisions (HOOK_JEV_MODEL overrides).",
+            "default": "perplexity/pplx-decider-v1.2"
         },
         "jevApiKey": {
             "type": "string",

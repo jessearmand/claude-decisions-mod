@@ -6,10 +6,10 @@
     "plugins": [
         {
             "name": "decisions-guard",
-            "description": "Deterministic Bash and file guards plus a Jev decision-model risk judge for Claude Code",
+            "description": "Deterministic Bash and file guards plus a decision-model risk judge for Claude Code",
             "source": "./",
             "category": "security"
         }
     ],
-    "description": "Deterministic Bash and file guards plus a Jev decision-model risk judge for Claude Code"
+    "description": "Deterministic Bash and file guards plus a decision-model risk judge for Claude Code"
 }
