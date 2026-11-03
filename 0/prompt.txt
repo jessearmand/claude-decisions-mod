@@ -1,0 +1,3 @@
+Where is validate, is it a project specific script? 
+
+Yes, I think we can ignore scratchpad dirs inside the project, because they're meant to be managed by the agent
