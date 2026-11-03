@@ -1,0 +1,1 @@
+I've merged the PR, and let's reinstall the plugin first from the main branch
