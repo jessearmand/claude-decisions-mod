@@ -1,0 +1,6 @@
+Review the dependencies, migrate linter and formatter to oxlint and oxfmt
+
+I've updated ai-cli to 0.7, verify that we can use the latest typesafe.ai Jev 
+AI_GATEWAY_API_KEY has been set with fnox
+
+Then install and test the mod in claude code, do I need a separate session for this?
