@@ -1,0 +1,7 @@
+Running this directly, fails why is that? 
+
+```
+claude plugin install decisions-guard --marketplace jessearmand/claude-decisions-mod
+
+✘ Failed to add marketplace: Cannot add marketplace "claude-decisions-mod": its source doesn't match its extraKnownMarketplaces entry in user or managed settings; add it from the source that entry lists, or change the entry.
+```
