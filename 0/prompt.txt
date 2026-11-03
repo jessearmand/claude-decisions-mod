@@ -1,0 +1,2 @@
+I've set jevEnable to true, but what about the rest of the config, what are their defauls?
+Hmm what would make it run with PreToolUse hook
