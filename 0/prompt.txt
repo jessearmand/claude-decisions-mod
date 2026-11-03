@@ -1,0 +1,10 @@
+Here is a note offered by a side agent:
+
+> Heads up · To stop the false blocks, the main agent narrowed the `.env` rules, so Bash can now read files named like `prod.env`.
+>
+> **Files named like prod.env are no longer guarded**
+> * The secrets guard used to block any command where `.env` appeared anywhere in the text. That's why searches like `rg 'process.env.HOME'` were blocked.
+> * The fix only counts `.env` when it **starts a file name**: `.env`, `.env.local` and `config/.env` are still blocked.
+> * Names that merely **end** in `.env`, such as `prod.env`, `app.env` or `staging.env`, now pass. `cat prod.env` will run.
+> * The file-reading tool already let these through, so the two checks now agree. That's the main agent's reasoning.
+> * **If your projects keep secrets in files named like `prod.env`**, ask the main agent to add that naming pattern back before you commit.
