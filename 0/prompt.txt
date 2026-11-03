@@ -1,0 +1,11 @@
+Here is a note offered by a side agent:
+
+> Heads up · The audit-log fix still has a gap: once a day's log grows past about 3 MB, the next record erases the whole day's log.
+>
+> **A large daily audit log gets erased**
+> - Every guard decision is saved as one line in a log file for that day, in `~/.claude/hooks-logs`.
+> - Claude Code gives a plugin no way to add to the end of a file. So the plugin reads the whole file, adds the new line, and writes the whole file back.
+> - If the file is bigger than about 3 MB, the plugin skips the read and writes only the new line. **Everything already logged that day is lost.**
+> - That takes a few thousand records, which a busy day of sessions and subagents can reach.
+> - The new fix only stops parallel calls inside one Claude Code session from losing each other's lines. Two separate sessions can still overwrite each other.
+> - **Ask the main agent to start a new log file when the size limit is reached, instead of overwriting the old one.**
