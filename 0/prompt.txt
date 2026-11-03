@@ -1,0 +1,23 @@
+Yes commit this, but we still have false positive here:
+
+```
+ │ source scratchpad/split/stage.sh && git add src/openrouter/decision_photos.rs src/openrouter/mod.rs src/app/dispatch.rs src/app/clustering.rs && git diff --cached --stat && validate
+ │ Hook PreToolUse:Bash requires confirmation for this command:
+ │ rm-rf-guard: this command runs `rm` with both recursive and force, which deletes without stopping on anything. It runs only if the user confirms.
+ │
+ │ Invocation(s):
+ │   rm -rf scratchpad/split/tree    (via validate())
+ │
+ │ Target analysis:
+ │   scratchpad/split/tree is a directory (18 immediate entries) at /Users/jessearmand/Develop/xdevplatform/xplorertui/scratchpad/split/tree
+ │       safer: rm -r scratchpad/split/tree
+ │
+ │ Less destructive alternatives:
+ │   `rm <file>`      removes a single file — no flags needed
+ │   `rm -r <dir>`    removes a directory tree, but stops on write-protected entries instead of silently forcing them
+ │
+ │ If this is declined or denied: do NOT retry it and do NOT route around this hook — no `sudo`, no `find -delete`, no `git clean -xdf`, no Python `shutil.rmtree`, no `trash`/`mv` to a temp dir. Use a 'safer:' command above if one fits, otherwise ask the user how to proceed (for example, they can run `! rm -rf <target>` themselves), and report it in your reply. Never silently skip a removal the task depended on.
+ settings.json to update hooks
+```
+
+This can be resolved in a separate branch
