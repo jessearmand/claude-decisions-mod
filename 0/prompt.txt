@@ -1,0 +1,1 @@
+Yes commit them as two separate commits
