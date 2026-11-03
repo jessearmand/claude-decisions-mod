@@ -1,0 +1,42 @@
+Here's a review result from codex, can we resolve them and examine what they are first?
+
+```
+The port introduces two configuration-guard bypasses under the engine filesystem contract, along with actionable glob-matching performance, audit-log concurrency, and global ask-option defects.
+
+**Independent impact: High.** Installing this plugin places the new guard chain on every tool call in a Claude Code session, affecting shell execution, credential access, configuration changes, and generated-file edits. Its filesystem adapter determines whether protected settings and hook files can be modified. Its parser processes ordinary Bash workflows, and its audit writer handles concurrent calls from sessions and subagents. The optional judge adds an external evaluation path when enabled.
+
+1. **[P1] Resolve symlink targets when adapting directory entries**  
+   [src/host/engine-host.ts:149](codex://review?pr=https%3A%2F%2Fgithub.com%2Fjessearmand%2Fclaude-decisions-mod%2Fpull%2F1&path=src%2Fhost%2Fengine-host.ts&line=149&side=right)
+
+   The engine’s `$.fs.list()` reports symbolic links as `kind: "other"`, but `Host.list()` requires the target’s kind, as the Node and memory hosts provide. Passing the engine kind through makes `globWalk()` skip symlink directories whenever another path segment follows.
+
+   With `/work/alias` pointing to `/home/u/.claude`, `printf '{}' > al*/settings.json` reaches the real settings file, but the engine host finds no glob matches and config-guard defers. Replaying the complete registered chain with the documented engine entry shape produced no decision, whereas MemoryHost denied the same call through `claude-settings`. Stat linked entries before returning their target kind so glob expansion preserves configuration protection.
+
+2. **[P1] Account for case aliases that preserve their spelling**  
+   [src/shell/filesystem-paths.ts:62](codex://review?pr=https%3A%2F%2Fgithub.com%2Fjessearmand%2Fclaude-decisions-mod%2Fpull%2F1&path=src%2Fshell%2Ffilesystem-paths.ts&line=62&side=right)
+
+   The equality check assumes `realPath()` canonicalizes the case of an existing path. The engine’s `$.fs.stat(..., { resolve: true })` contract instead preserves a case alias’s spelling, and `engineHost.realPath()` passes that spelling through. The swapped sibling and original therefore resolve to different strings even on a case-insensitive macOS volume, causing the probe to return `false`.
+
+   A write to `/Users/u/.CLAUDE/SETTINGS.JSON` then misses the case-sensitive configuration rules despite addressing the actual `.claude/settings.json`. This was reproduced with an engine-contract filesystem stub. Use a case-sensitivity probe supported by that contract, or protect case aliases conservatively when identity cannot be established.
+
+3. **[P2] Bound the wildcard matcher’s repeated search states**  
+   [src/shell/glob.ts:298](codex://review?pr=https%3A%2F%2Fgithub.com%2Fjessearmand%2Fclaude-decisions-mod%2Fpull%2F1&path=src%2Fshell%2Fglob.ts&line=298&side=right)
+
+   Each `*` recursively tries every remaining text position without memoizing `(textIndex, patIndex)`, so patterns containing repeated stars and literals have exponential rejection time.
+
+   This is reachable during pathname expansion before a Bash tool runs: with one filename consisting of 40 `a` characters, parsing `echo` followed by an unquoted pattern of twelve `*a` segments and a final `b` exceeded a four-second bounded reproduction. Eight segments already took about half a second for one match. Because this synchronous matcher runs inside the hook, the judge’s HTTP timeout cannot interrupt it, and slightly larger inputs can stall tool processing. Memoize match states or use a bounded matching algorithm.
+
+4. **[P2] Serialize the complete audit-log read and write operation**  
+   [src/host/engine-host.ts:206](codex://review?pr=https%3A%2F%2Fgithub.com%2Fjessearmand%2Fclaude-decisions-mod%2Fpull%2F1&path=src%2Fhost%2Fengine-host.ts&line=206&side=right)
+
+   Parallel tool calls can read the same daily log contents and then overwrite each other’s appended records. All guards share that daily path, so this affects ordinary concurrent calls and subagent activity.
+
+   An in-memory reproduction of two concurrent `appendText()` calls starting with `seed\n` finished with only `seed\nsecond\n`, losing the first event. Protect the entire read-modify-write sequence with a per-path queue or another atomic append mechanism; serializing only the final writes would still lose records.
+
+5. **[P2] Apply the global ask option to secrets-guard tiers**  
+   [src/config.ts:175](codex://review?pr=https%3A%2F%2Fgithub.com%2Fjessearmand%2Fclaude-decisions-mod%2Fpull%2F1&path=src%2Fconfig.ts&line=175&side=right)
+
+   The `askInsteadOfDeny` option is advertised as prompting for every deterministic denial, and `askAll` already softens dangerous-commands, config-guard, and file-protection decisions. Secrets-guard, however, consults only `config.askForLevel`, whose values ignore `askAll`.
+
+   With `resolveConfig(host, { askInsteadOfDeny: true })`, a `Read` of `/home/u/.env` still returns `deny`, so the advertised option does not let the user approve that operation. Include the global option when resolving these tier flags so secret-file decisions honor the same configured policy.
+```
