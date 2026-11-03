@@ -1,0 +1,1 @@
+I've cleaned up the hooks in the settings, and we can continue with adding it as a local marketplace and installing the mod
