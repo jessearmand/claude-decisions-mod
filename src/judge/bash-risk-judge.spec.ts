@@ -279,7 +279,7 @@ describe("bashRiskJudge.run", () => {
                 unknown: "cannot tell",
             },
         });
-        expect(sent().model).toBe("typesafe-ai/jev");
+        expect(sent().model).toBe(DEFAULT_JEV_MODEL);
     });
 
     // Well-formed JSON carrying an untrustworthy answer must defer, not ask.

@@ -1,8 +1,8 @@
 {
     "name": "claude-decisions-mod",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "private": true,
-    "description": "Claude Code mod: deterministic Bash and file guards plus a Jev decision-model risk judge",
+    "description": "Claude Code mod: deterministic Bash and file guards plus a decision-model risk judge",
     "type": "module",
     "scripts": {
         "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
