@@ -1,0 +1,3 @@
+I've updated the plugin via the built-in "Update" inside /plugin interface
+
+Examine if it's up-to-date
