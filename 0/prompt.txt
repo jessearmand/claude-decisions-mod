@@ -1,0 +1,12 @@
+Then, also add a github action workflow for basic checks:
+
+```
+bun run typecheck   # tsc against the engine's types and against Node
+bun run lint        # oxlint + oxfmt --check
+bun run format      # oxfmt --write (lint:fix also applies oxlint fixes)
+bun run test        # vitest: the ported Python corpora and parity fixtures
+bun run test:mod    # claude plugin test: the hooks module against the engine
+bun run validate    # claude plugin validate
+```
+
+Would everything above runnable in github actions environment?
