@@ -1,0 +1,1 @@
+Yes we can add that that log when there's a judge fallback. But does a fallback occur when the model id is wrong?
