@@ -1,0 +1,10 @@
+Examine why this is being asked in config-guard?
+
+ │ git rm -q src/mlx/media.rs && sed -i '' '/^pub mod media;$/d' src/mlx/mod.rs && sed -i '' 's/^pub mod event;$/pub mod event;\npub mod media;/' src/main.rs && grep -n "^pub mod" src/main.rs src/mlx/mod.rs && cargo test --quiet media:: 2>&1 | tail -15
+
+ │ Hook PreToolUse:Bash requires confirmation for this command:
+ │ 🧷 Confirm by config-guard [unknown-target] — cannot run (write) (the target is not known, and `sed` replaces its contents): the path is computed at run time and could be an agent's configuration.
+ │     target: /^pub mod media;$/d
+ │
+ │ An agent must not change its own configuration, hooks or persistence locations: that is how guards get switched off. Do not route around this (another tool, a copy-and-rename, a script). Tell the user exactly what to change and let them make the edit, or have them run it with `! <command>`.
+ settings.json to update hooks
