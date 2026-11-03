@@ -1,0 +1,1 @@
+Yes, commit the five review fixes, and this log as a seperate commit, and we can push to the same branch of the PR
