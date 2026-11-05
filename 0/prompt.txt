@@ -1,0 +1,10 @@
+Review these deprecated notices on the CI runs:
+https://github.com/jessearmand/claude-decisions-mod/actions/runs/41683687126
+
+---
+
+Yes, bump to v7
+
+---
+
+Yes, branch + PR
