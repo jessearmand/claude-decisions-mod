@@ -1,6 +1,6 @@
 {
     "name": "claude-decisions-mod",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "private": true,
     "description": "Claude Code mod: deterministic Bash and file guards plus a decision-model risk judge",
     "type": "module",
