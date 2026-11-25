@@ -55,7 +55,7 @@ nothing deterministic decided, and it can only ask.
 | `secrets-guard` | Bash, Read, Edit, Write, Grep, Glob | Blocks reading, mutating or exfiltrating credential files (`.env`, keys, cloud and coding-agent tokens), in three tiers. |
 | `config-guard` | Bash, Edit, Write | Stops the agent changing its own settings, hooks, MCP servers, other harnesses' config, home-directory skills and instructions, and persistence locations (shell rc files, git hooks and config, launchd, systemd, cron). |
 | `file-protection` | Edit, Write | Denies hand edits to generated files: lockfiles, `.git/` internals, `node_modules/`. |
-| `bash-command-validator` | Bash | Points `grep`, `find -name` and source-code `rg` at `rg`, `rg --files` and `ast-grep`. |
+| `bash-command-validator` | Bash | Points `grep` and `find -name` at `rg` and `rg --files`. |
 | `bash-risk-judge` | Bash | Opt-in. Asks a decision model typed questions (destruction, exfiltration, persistence, weakened controls, fetch-and-execute, privilege escalation, erased history, credential stores, network exposure, off-task) and prompts when any crosses a threshold. |
 
 All Bash guards parse the command with a shared bash-subset parser, so

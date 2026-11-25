@@ -13,8 +13,6 @@ import type { GuardDeps } from "./guard.ts";
 const GREP = "Use 'rg' (ripgrep) instead of 'grep' for better performance and features";
 const FIND =
     "Use 'rg --files | rg pattern' or 'rg --files -g pattern' instead of 'find -name' for better performance";
-const AST_GREP =
-    "Use 'ast-grep -p pattern' instead of 'rg' for Swift, Python, TypeScript, JavaScript, JSX, TSX, Rust, Go, C, C++, HTML, Java, Kotlin, Ruby, and YAML source code";
 
 function deps(env: Record<string, string> = {}): GuardDeps {
     const host = memoryHost({ env });
@@ -34,9 +32,9 @@ describe("validateCommand", () => {
         ["find . -name '*.py'", [FIND]],
         ["find src -name main.rs -exec cat {} +", [FIND]],
         ["find . -type f", []],
-        ["rg --type python foo", [AST_GREP]],
-        ["rg foo '*.ts'", [AST_GREP]],
-        ["rg -g '*.swift' import", [AST_GREP]],
+        ["rg --type python foo", []],
+        ["rg foo '*.ts'", []],
+        ["rg -g '*.swift' import", []],
         ["rg --files -g '*.ts'", []],
         ["rg --files | rg '*.ts'", []],
         ["rg foo src/", []],
