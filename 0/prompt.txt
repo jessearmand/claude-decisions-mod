@@ -1,0 +1,7 @@
+Review the hooks being used in claude-decisions-mod, and remove the ast-grep hook both in claude-decisions-mod and ~/Develop/agent-config/hooks/ for codex, opencode (if it's already setup) and omp
+
+But, I think there's no such hooks setup with opencode plugins
+
+---
+
+commit this on a new branch and open a PR, and bump the claude plugin version
